@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="style.css">
+
+<style>
+    main {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: ". image hero .";
+        grid-template-columns: 20% 40% 30% 20%;
+
+        align-items: center;
+        place-content: center;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        grid-area: image;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .hero {
+        grid-area: hero;
+        width: 100%;
+    }
+
+
+    aside {
+        position: absolute;
+        margin-inline: auto;
+
+        bottom: 10%;
+        inset: auto 0 10% 0;
+
+        display: flex;
+        justify-content: space-around;
+
+        width: clamp(16rem, 80%, 75rem);
+        padding: 1rem;
+
+        -webkit-backdrop-filter: blur(1.2rem) saturate(180%);
+        backdrop-filter: blur(1.2rem) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.333);
+    }
+
+    aside section {
+        display: grid;
+        gap: 1rem;
+    }
+</style>
+
+<main>
+    <div class="hero-image">
+        <img src="assets/silhouette.png" alt="silhouette">
+    </div>
+    <section class="hero">
+        <p>Hola soy Alejandro Rosales.</p>
+        <h1>Programador y diseñador UI/UX</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quasi numquam quia doloremque, ab eaque
+            voluptatibus quae repellat vero.</p>
+        <button type="button">Acerca de mí</button>
+    </section>
+</main>
+<aside>
+    <section>
+        <h1>Hola</h1>
+        <p>Mundo</p>
+    </section>
+    <section>
+        <h1>Hola</h1>
+        <p>Mundo</p>
+    </section>
+    <section>
+        <h1>Hola</h1>
+        <p>Mundo</p>
+    </section>
+    <section>
+        <h1>Hola</h1>
+        <p>Mundo</p>
+    </section>
+</aside>

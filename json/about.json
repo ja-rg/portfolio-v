@@ -1,0 +1,29 @@
+{
+    "name": "Alejandro Rosales",
+    "bio": "Systems Developer with 5 years of experience.",
+    "profile_image": "assets/profile.jpg",
+    "projects": [
+      {
+        "title": "Portfolio Website",
+        "description": "A personal portfolio website to showcase my projects.",
+        "tech_stack": ["HTML", "CSS", "JavaScript"],
+        "repo_link": "https://github.com/johndoe/portfolio",
+        "live_demo_link": "https://johndoe.com"
+      }
+    ],
+    "skills": ["JavaScript", "Python", "React"],
+    "experience": [
+      {
+        "company": "TechCorp",
+        "role": "Software Engineer",
+        "description": "Worked on backend API development.",
+        "start_date": "2020-06-01",
+        "end_date": "2023-07-01"
+      }
+    ],
+    "contacts": {
+      "LinkedIn": "https://linkedin.com/in/johndoe",
+      "GitHub": "https://github.com/johndoe"
+    }
+  }
+  
