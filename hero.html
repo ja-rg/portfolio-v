@@ -18,12 +18,40 @@
 
         img {
             width: 100%;
+            filter: drop-shadow(0 0 15rem white);
         }
     }
 
     .hero {
         grid-area: hero;
+
         width: 100%;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        button {
+            margin-block: 1rem;
+            background-color: white;
+            border: none;
+            padding: 1rem;
+            padding-inline: 2rem;
+            font-size: 1.5em;
+            font-weight: bolder;
+            position: relative;
+        }
+
+        button::before {
+            content: "";
+            inset: .5rem 0 0 1rem;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            position: absolute;
+            z-index: -1;
+            border: 0.1rem solid white;
+        }
     }
 
 
@@ -50,12 +78,17 @@
     aside section {
         display: grid;
         gap: 1rem;
+        text-align: end;
+
+        p {
+            font-size: 1.5rem;
+        }
     }
 </style>
 
 <main>
     <div class="hero-image">
-        <img src="assets/silhouette.png" alt="silhouette">
+        <img src="assets/profile.png" alt="Profile">
     </div>
     <section class="hero">
         <p>Hola soy Alejandro Rosales.</p>
@@ -67,19 +100,19 @@
 </main>
 <aside>
     <section>
-        <h1>Hola</h1>
-        <p>Mundo</p>
+        <h2>4+</h2>
+        <p>Años de Experiencia</p>
     </section>
     <section>
-        <h1>Hola</h1>
-        <p>Mundo</p>
+        <h2>10+</h2>
+        <p>Proyectos</p>
     </section>
     <section>
-        <h1>Hola</h1>
-        <p>Mundo</p>
+        <h2>5+</h2>
+        <p>Certificaciones</p>
     </section>
     <section>
-        <h1>Hola</h1>
-        <p>Mundo</p>
+        <h2>2+</h2>
+        <p>Clientes</p>
     </section>
 </aside>
