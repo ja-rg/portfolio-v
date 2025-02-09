@@ -1,9 +1,9 @@
 section#hero {
 	display: grid;
-	height: 100vh;
+	height: 100dvh;
 	grid-template-columns: 20% 1fr 20%;
 	grid-template-areas: ". hero ."
-		". aside .";
+		". academics .";
 
 	align-items: center;
 }
@@ -12,14 +12,16 @@ section#hero {
 	width: 100%;
 	grid-area: hero;
 	height: fit-content;
-	align-self: flex-end;
 
 	display: flex;
+	flex: 1;
+	align-items: center;
+	align-self: flex-end;
 	gap: 2rem;
 }
 
 .hero .hero-image {
-	width: 60%;
+	width: 30%;
 }
 
 .hero button {
@@ -43,7 +45,7 @@ section#hero {
 	height: 100%;
 	transform: scale(0.9);
 	background: transparent;
-	border: 0.1rem solid var(--tertiary);
+	border: 0.01rem solid var(--tertiary);
 	transition: transform 300ms ease-out;
 	z-index: -1;
 }
@@ -53,39 +55,29 @@ section#hero {
 }
 
 
-aside {
-	height: fit-content;
+#academics {
 	display: flex;
 	gap: 6rem;
 	padding: 1rem;
 	justify-content: center;
 
 	border-radius: 1rem;
-	background: radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0 0 100% / 0.15), transparent 10rem), var(--dark-level-3);
-	background-attachment: fixed;
-	grid-area: aside;
+	background: radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsla(0, 0%, 100%, 0.096), transparent 5rem), var(--dark-level-3);
+	grid-area: academics;
 	position: relative;
 }
 
-aside::before {
-	opacity: 0;
+#academics::before {
 	content: "";
 	position: absolute;
-	inset: 0;
-	width: calc(100% - 2rem);
-	margin-inline: auto;
-	background-color: rgba(255, 255, 255, 0.096);
-	mask:
-		linear-gradient(white, rgba(179, 178, 178, 0.24)) 50% 0 / 100% .3rem no-repeat,
-		linear-gradient(white, rgba(179, 178, 178, 0.24)) 50% 100% / 100% .3rem no-repeat;
+	inset: -0.1rem;
+	z-index: -1;
+	border-radius: inherit;
+	background: radial-gradient(circle at calc(var(--x) * 1px) calc(var(--y) * 1px), hsl(0, 0%, 100%), transparent 5rem), var(--dark-level-3);
 }
 
-aside:hover::before {
-	opacity: 1;
-	transition: opacity 300ms ease-in-out;
-}
 
-aside section {
+#academics div {
 	display: grid;
 	gap: 1rem;
 	text-align: center;
@@ -95,20 +87,15 @@ aside section {
 	section#hero {
 		grid-template-areas: ". hero .";
 		grid-template-columns: 5% 1fr 5%;
+
+		place-content: center;
 	}
 
 	.hero {
-		justify-content: center;
 		flex-direction: column;
-		height: 100%;
 	}
 
 	.hero .hero-image {
-		height: 30%;
-		width: 100%;
-	}
-
-	.profile {
-		width: 100%;
+		width: 40%;
 	}
 }
