@@ -1,21 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(styles/card.css);
+@import url(styles/hero.css);
+
+
+.jetbrains-mono-ft {
+	font-family: "JetBrains Mono", serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-    font-family: "Overpass", serif;
-    background-color: black;
-    color: white;
+	--x: 0;
+	--y: 0;
+
+	--dark-level-1: rgb(15, 16, 17);
+	--dark-level-2: rgb(8, 9, 11);
+	--dark-level-3: #1b1c1d;
+
+	--primary: white;
+	--secondary: #d0d6e0;
+	--tertiary: #8a8f98;
+
+	font-family: "Overpass", serif;
+	background-color: var(--dark-level-2);
+	/* scroll-behavior: smooth; */
 }
 
-h2 {
-    font-size: 3rem;
+main {
+	scroll-snap-type: y proximity;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+section {
+	scroll-snap-align: start;
 }
 
 h1 {
-    font-size: 4em;
+	font-size: 3.5rem;
+	color: var(--primary);
+}
+
+h2,
+h3,
+h4 {
+	color: var(--primary);
+	font-size: 1.5rem;
+}
+
+p {
+	color: var(--secondary);
+	font-size: 1.5rem;
+}
+
+.bolder {
+	font-weight: bolder;
+	color: var(--primary);
+}
+
+.profile {
+	border-radius: 1rem;
+	border: var(--tertiary) solid 0.01em;
+	aspect-ratio: 1;
+	filter: sepia(20%) grayscale(60%);
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+iconify-icon {
+	color: var(--primary);
+}
+
+@media (max-width: 1080px) {
+	:root {
+		font-size: 80%;
+	}
+
+
+	aside {
+		display: none !important;
+	}
+
 }

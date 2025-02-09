@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Portfolio</title>
+
+	<script defer src="https://cdn.jsdelivr.net/gh/hankhank10/alpine-fetch@main/alpine-fetch.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<main x-data="{ portfolio: $fetchjson('json/about.json') }">
+		<section id="hero">
+			<div class="hero">
+				<div class="hero-image">
+					<img class="profile" src="assets/profile.jpg" alt="profile">
+				</div>
+				<div class="hero-content">
+					<p>Hola, soy <em class="bolder">Alejandro Rosales</em>.</p>
+					<h1>Programador y diseñador UI/UX</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quasi numquam quia doloremque,
+						ab eaque
+						voluptatibus quae repellat vero.</p>
+					<button type="button">Acerca de mí</button>
+				</div>
+			</div>
+			<aside>
+				<div>
+					<h2>4+</h2>
+					<p>Años de Experiencia</p>
+				</div>
+				<div>
+					<h2>10+</h2>
+					<p>Proyectos</p>
+				</div>
+				<div>
+					<h2>5+</h2>
+					<p>Certificaciones</p>
+				</div>
+				<div>
+					<h2>2+</h2>
+					<p>Clientes</p>
+				</div>
+			</aside>
+		</section>
+		<section id="cards">
+			<article class="card">
+				<div class="card-image">
+					<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
+				</div>
+				<div class="card-content">
+					<h3 class="card-title">Ingeniería Cibernética</h3>
+					<span class="card-date">
+						<time datetime="2020-07">2020</time>-<time datetime="2024-12">2024</time>
+					</span>
+				</div>
+
+				<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24" height="24"></iconify-icon>
+			</article>
+			<article class="card">
+				<div class="card-image">
+					<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
+				</div>
+				<div class="card-content">
+					<h3 class="card-title">Preparatoria</h3>
+					<span class="card-date">
+						<time datetime="2020-07">2017</time>-<time datetime="2024-07">2020</time>
+					</span>
+				</div>
+
+				<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24" height="24"></iconify-icon>
+			</article>
+		</section>
+
+	</main>
+</body>
+<script src="cursor-styles.js"></script>
+
+</html>
