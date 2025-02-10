@@ -1,0 +1,12 @@
+{
+	"about_page": {
+		"en": "About me",
+		"es": "Sobre mí",
+		"fr": "À propos de moi"
+	},
+	"greeting": {
+		"en": "Hello, I am",
+		"es": "Hola, soy",
+		"fr": "Bonjour, je suis"
+	}
+}

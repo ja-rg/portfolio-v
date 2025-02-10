@@ -1,0 +1,198 @@
+{
+	"name": "Alejandro Rosales",
+	"profile_image": "assets/profile.jpg",
+	"title": {
+		"en": "Cybernetics and Computational Systems Engineer",
+		"es": "Ingeniero en Cibernética y Sistemas Computacionales",
+		"fr": "Ingénieur en Cybernétique et Systèmes Informatiques"
+	},
+	"contact": {
+		"phone": [
+			"+52 55 6805-1332",
+			"+52 55 2235-7723"
+		],
+		"email": "j.alex.rosales@proton.me",
+		"website": "https://portfolio.alex2rg.lat",
+		"linkedin": "https://www.linkedin.com/in/jesús-alejandro-rosalesgonzález-35069a140/"
+	},
+	"about": {
+		"en": "Passionate about technology and its ability to transform the world, I specialize in software development, cloud computing, and UI/UX design. My mission is to create intuitive, efficient, and scalable solutions.",
+		"es": "Apasionado por la tecnología y su capacidad de transformar el mundo, me especializo en desarrollo de software, computación en la nube y diseño UI/UX. Mi misión es crear soluciones intuitivas, eficientes y escalables.",
+		"fr": "Passionné par la technologie et son pouvoir de transformation, je me spécialise dans le développement logiciel, l'informatique en nuage et le design UI/UX. Ma mission est de créer des solutions intuitives, efficaces et évolutives."
+	},
+	"stats": [
+		{
+			"value": "4+",
+			"en": "Years of Experience",
+			"es": "Años de Experiencia",
+			"fr": "Années d'Expérience"
+		},
+		{
+			"value": "10+",
+			"en": "Projects",
+			"es": "Proyectos",
+			"fr": "Projets"
+		},
+		{
+			"value": "5+",
+			"en": "Certifications",
+			"es": "Certificaciones",
+			"fr": "Certifications"
+		},
+		{
+			"value": "2+",
+			"en": "Clients",
+			"es": "Clientes",
+			"fr": "Clients"
+		}
+	],
+	"expertise": {
+		"en": [
+			"Software Development (PHP, C++, C, JavaScript, C#, Python)",
+			"Computer Graphics & UI/UX Design",
+			"Cloud Computing & Containerization",
+			"Mathematical & Computational Physics",
+			"Database Administration"
+		],
+		"es": [
+			"Desarrollo de software (PHP, C++, C, JavaScript, C#, Python)",
+			"Gráficos por computadora y diseño UI/UX",
+			"Computación en la nube y contenedores",
+			"Matemática y física computacionales",
+			"Administración de bases de datos"
+		],
+		"fr": [
+			"Développement logiciel (PHP, C++, C, JavaScript, C#, Python)",
+			"Graphisme informatique et design UI/UX",
+			"Informatique en nuage et conteneurisation",
+			"Mathématiques et physique computationnelles",
+			"Administration de bases de données"
+		]
+	},
+	"education": [
+		{
+			"degree": {
+				"en": "Bachelor's Degree in Cybernetics and Computational Systems Engineering",
+				"es": "Licenciatura en Ingeniería Cibernética y Sistemas Computacionales",
+				"fr": "Licence en Ingénierie Cybernétique et Systèmes Informatiques"
+			},
+			"institution": "Universidad La Salle",
+			"first_year": "2020",
+			"last_year": "2024",
+			"gpa": "9.57"
+		},
+		{
+			"degree": {
+				"en": "High School Diploma",
+				"es": "Preparatoria",
+				"fr": "Baccalauréat"
+			},
+			"institution": "Universidad La Salle",
+			"first_year": "2017",
+			"last_year": "2020",
+			"gpa": "9.12"
+		}
+	],
+	"experience": [
+		{
+			"position": {
+				"en": "Project Immersion Analyst",
+				"es": "Analista de Proyectos de Inmersión",
+				"fr": "Analyste de Projets d'Immersion"
+			},
+			"company": "Universidad La Salle / Faculty of Engineering",
+			"years": "Jan 2025 – Present"
+		},
+		{
+			"position": {
+				"en": "Programmer",
+				"es": "Programador",
+				"fr": "Programmeur"
+			},
+			"company": "Universidad La Salle / Faculty of Engineering",
+			"years": "Feb 2022 – Dec 2024"
+		}
+	],
+	"projects": [
+		{
+			"title": {
+				"en": "Web Designer",
+				"es": "Diseñador de páginas web",
+				"fr": "Concepteur Web"
+			},
+			"description": {
+				"en": "Front-end design for EAF company website.",
+				"es": "Diseño FRONT-END de la página web de la empresa EAF.",
+				"fr": "Conception FRONT-END du site Web de l'entreprise EAF."
+			},
+			"link": "https://www.estatusaf.com.mx/"
+		},
+		{
+			"title": {
+				"en": "Full Stack Developer",
+				"es": "Desarrollador de sistemas",
+				"fr": "Développeur Full Stack"
+			},
+			"description": {
+				"en": "Freelance Full Stack Development for Studially using NodeJS and VueJS.",
+				"es": "Desarrollo Freelance Full Stack en Studially con NodeJS y VueJS.",
+				"fr": "Développement Full Stack Freelance pour Studially avec NodeJS et VueJS."
+			},
+			"link": "https://www.studially.com"
+		}
+	],
+	"certifications": [
+		{
+			"year": "2024",
+			"title": "Databases and SQL for Data Science",
+			"link": "https://www.credly.com/badges/f2dd8cd4-a33c-4b48-b2d9-bfde7df0a5a0/public_url"
+		},
+		{
+			"year": "2024",
+			"title": "Big Data Foundations - Level 1",
+			"link": "https://www.credly.com/badges/71bbaf2c-69ee-41d0-821e-0e197135a0b2/public_url"
+		},
+		{
+			"year": "2024",
+			"title": "Data Science Foundations - Level 1",
+			"link": "https://www.credly.com/badges/c0d4dae0-c67a-43c3-a4c4-26a49982beda/public_url"
+		},
+		{
+			"year": "2022",
+			"title": "CCNA: Introduction to Networks",
+			"link": "https://www.credly.com/badges/c6680c35-68c9-40fc-8792-5e0a22983b18/public_url"
+		}
+	],
+	"skills": {
+		"en": [
+			"Data Analysis with Python",
+			"Fluent English Communication",
+			"Linux Administration",
+			"Adobe Suite (Photoshop, Illustrator)",
+			"Low-level C Programming for Linux",
+			"Docker, Kubernetes",
+			"Cloud Computing on Azure",
+			"UI/UX Design"
+		],
+		"es": [
+			"Análisis de datos con Python",
+			"Comunicación fluida en inglés",
+			"Administración de Linux",
+			"Suite de Adobe (Photoshop, Illustrator)",
+			"Programación en C para Linux de bajo nivel",
+			"Docker, Kubernetes",
+			"Computación en la nube en Azure",
+			"Diseño UI/UX"
+		],
+		"fr": [
+			"Analyse de données avec Python",
+			"Communication en anglais courante",
+			"Administration Linux",
+			"Suite Adobe (Photoshop, Illustrator)",
+			"Programmation en C pour Linux bas niveau",
+			"Docker, Kubernetes",
+			"Informatique en nuage sur Azure",
+			"Design UI/UX"
+		]
+	}
+}
