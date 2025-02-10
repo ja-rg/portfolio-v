@@ -15,15 +15,27 @@
 </head>
 
 <body>
-	<main x-data="{portfolio: null, lang: `en`, page: null}" x-init="
+	<main x-data="{
+		portfolio: null,
+		lang: `en`,
+		languages: [
+			{ code: 'en', name: 'English' },
+			{ code: 'es', name: 'Español' },
+			{ code: 'fr', name: 'Français' }
+		],
+		page: null
+	}" x-init="
 		portfolio = await (await fetch('json/portfolio.json')).json();
 		page = await (await fetch('json/page.json')).json()">
 		<div class="language-controller" tabindex="0">
 			<div class="language-options">
-				<button x-show="lang !== `en`" data-lang="en" type="button" @click="lang = `en`">English</button>
-				<button x-show="lang !== `es`" data-lang="es" type="button" @click="lang = `es`">Español</button>
-				<button x-show="lang !== `fr`" data-lang="fr" type="button" @click="lang = `fr`">Français</button>
+				<template x-for="language in languages">
+					<button x-show="lang !== language.code" type="button" @click="lang = language.code">
+						<span x-text="language.name"></span>
+					</button>
+				</template>
 			</div>
+
 		</div>
 
 		<section id="hero">
