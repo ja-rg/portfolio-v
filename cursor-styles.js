@@ -7,7 +7,7 @@ document.addEventListener('pointermove', (event) => {
 	const y = event.clientY - rect.top;
 
 	requestAnimationFrame(() => {
-		element.style.setProperty('--x', Math.round(x));
-		element.style.setProperty('--y', Math.round(y));
+		element.style.setProperty('--x', `${x}px`);
+		element.style.setProperty('--y', `${Math.round(y)}px`);
 	});
 });
