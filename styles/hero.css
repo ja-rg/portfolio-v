@@ -45,7 +45,6 @@ section#hero {
 	width: 100%;
 }
 
-
 #cifras {
 	display: flex;
 	gap: 6rem;
@@ -75,8 +74,15 @@ section#hero {
 	}
 
 	.hero .hero-image {
-		width: 40%;
+		width: 100%;
+		aspect-ratio: 2.5 / 1;
+		object-fit: cover;
+
+		img {
+			object-position: 0 -10rem;
+		}
 	}
+
 
 	.hero .hero-glare {
 		transform: translateY(-150%);
