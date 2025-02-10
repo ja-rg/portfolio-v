@@ -1,0 +1,54 @@
+.language-controller {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	width: 3rem;
+	height: 3rem;
+	cursor: crosshair;
+	transition: transform 0.3s ease-in-out;
+	z-index: 1;
+}
+
+.language-controller::after {
+	content: "";
+	width: 3rem;
+	aspect-ratio: 1;
+	background: var(--primary);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.language-options {
+	position: absolute;
+	bottom: 1rem;
+	right: 0;
+	padding: 1rem;
+	display: grid;
+	gap: 1rem;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	transform: translateY(10px);
+}
+
+.language-options button {
+	margin-block: 0.1rem;
+}
+
+.language-controller:hover::after,
+.language-controller:focus-within::after {
+	background: transparent;
+}
+
+.language-controller:hover .language-options,
+.language-controller:focus-within .language-options {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+/* Show content when hovering/focusing on the selector */
+.language-controller:hover~.main-content,
+.language-controller:focus-within~.main-content {
+	opacity: 1;
+}

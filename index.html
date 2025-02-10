@@ -7,77 +7,71 @@
 
 	<title>Portfolio</title>
 
-	<script defer src="https://cdn.jsdelivr.net/gh/hankhank10/alpine-fetch@main/alpine-fetch.js"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-	<script defer src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+	<script defer src="//unpkg.com/alpinejs"></script>
+	<script defer src="//code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-	<main>
+	<main x-data="{portfolio: null, lang: `en`, page: null}" x-init="
+		portfolio = await (await fetch('json/portfolio.json')).json();
+		page = await (await fetch('json/page.json')).json()">
+		<div class="language-controller" tabindex="0">
+			<div class="language-options">
+				<button x-show="lang !== `en`" data-lang="en" type="button" @click="lang = `en`">English</button>
+				<button x-show="lang !== `es`" data-lang="es" type="button" @click="lang = `es`">Español</button>
+				<button x-show="lang !== `fr`" data-lang="fr" type="button" @click="lang = `fr`">Français</button>
+			</div>
+		</div>
+
 		<section id="hero">
 			<div class="hero">
+				<div class="hero-glare"></div>
 				<div class="hero-image">
-					<img class="profile" src="assets/profile.jpg" alt="profile">
+					<img class="profile" :src="portfolio?.profile_image" alt="profile">
 				</div>
 				<div class="hero-content">
-					<p>Hola, soy <em class="bolder">Alejandro Rosales</em>.
+					<p><span x-text="page?.greeting[lang]"></span> <em class="bolder" x-text="portfolio?.name"></em>.
 					</p>
-					<h1>Programador y diseñador UI/UX</h1>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quasi numquam quia doloremque,
-						ab eaque
-						voluptatibus quae repellat vero.</p>
-					<button type="button">Acerca de mí</button>
+					<h1 x-text="portfolio?.title[lang]"></h1>
+					<p x-text="portfolio?.about[lang]"></p>
+					<button type="button"
+						@click="document.getElementById('academic').scrollIntoView({ behavior: 'smooth' })"><span
+							x-text="page?.about_page[lang]"></span></button>
 				</div>
 			</div>
-			<aside>
-				<div>
-					<h2>4+</h2>
-					<p>Años de Experiencia</p>
-				</div>
-				<div>
-					<h2>10+</h2>
-					<p>Proyectos</p>
-				</div>
-				<div>
-					<h2>5+</h2>
-					<p>Certificaciones</p>
-				</div>
-				<div>
-					<h2>2+</h2>
-					<p>Clientes</p>
-				</div>
+			<aside class="glower desktop-only" id="cifras">
+
+				<template x-for="stat in portfolio?.stats ?? []">
+					<div>
+						<h2 x-text="stat.value"></h2>
+						<p x-text="stat[lang]"></p>
+					</div>
+				</template>
+
+				<div class="overlay" aria-hidden="true"></div>
+
 			</aside>
 		</section>
-		<section id="cards">
-			<article class="card">
-				<div class="card-image">
-					<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
-				</div>
-				<div class="card-content">
-					<h3 class="card-title">Ingeniería Cibernética</h3>
-					<span class="card-date">
-						<time datetime="2020-07">2020</time>-<time datetime="2024-12">2024</time>
-					</span>
-				</div>
-
-				<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24" height="24"></iconify-icon>
-			</article>
-			<article class="card">
-				<div class="card-image">
-					<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
-				</div>
-				<div class="card-content">
-					<h3 class="card-title">Preparatoria</h3>
-					<span class="card-date">
-						<time datetime="2020-07">2017</time>-<time datetime="2024-07">2020</time>
-					</span>
-				</div>
-
-				<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24" height="24"></iconify-icon>
-			</article>
+		<section id="academic">
+			<template x-for="academic in portfolio?.education ?? []">
+				<article class="card">
+					<div class="card-image">
+						<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
+					</div>
+					<div class="card-content">
+						<h3 class="card-title" x-text="academic?.degree[lang]"></h3>
+						<span class="card-date">
+							<time :datetime="academic?.first_year" x-text="academic?.first_year"></time>-<time
+								:datetime="academic?.last_year" academic?.last_year>2024</time>
+						</span>
+					</div>
+					<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24"
+						height="24"></iconify-icon>
+				</article>
+			</template>
 		</section>
 
 	</main>
