@@ -1,4 +1,4 @@
-section#cards {
+section#academic {
 	padding: 4rem;
 	min-height: 100vh;
 
@@ -10,18 +10,24 @@ section#cards {
 }
 
 .card {
-	padding: 1rem;
-	width: 25rem;
+	padding: clamp(0.8rem, 2vw, 1.5rem);
+	/* Dynamic padding based on viewport */
+	width: 100%;
+	/* Responsive width (max 400px, min 90% of viewport) */
 	border-radius: 0.5rem;
 	position: relative;
 	cursor: pointer;
 
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: clamp(0.8rem, 2vw, 1.5rem);
+	/* Dynamic gap */
 
-	border: var(--tertiary) solid 0.01em;
+	border: var(--tertiary) solid 0.1rem;
+	transition: transform 0.2s ease-in-out;
+	/* Smooth hover effect */
 }
+
 
 .card:hover {
 	background:
@@ -47,11 +53,25 @@ section#cards {
 	background-color: var(--dark-level-3);
 	border-radius: 0.5rem;
 
-	aspect-ratio: 1;
-	padding: 1rem;
-	display: grid;
+	aspect-ratio: 1 / 1;
+	width: clamp(3rem, 25%, 5rem);
+	/* Ensures responsive image size */
+	padding: clamp(0.8rem, 2vw, 1.2rem);
+	/* Dynamic padding */
 
+	display: grid;
 	place-items: center;
+	/* Prevents shrinking in flex */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+	.card {
+		flex-direction: column;
+		/* Stack items on smaller screens */
+		align-items: center;
+		text-align: center;
+	}
 }
 
 

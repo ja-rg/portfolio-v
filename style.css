@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(styles/hero.css);
 @import url(styles/card.css);
+@import url(styles/controllers.css);
 
 
 .jetbrains-mono-ft {
@@ -28,6 +29,10 @@
 	--secondary: #d0d6e0;
 	--tertiary: #8a8f98;
 
+	--mint: hsl(162, 67%, 80%);
+	--hero-mesh-gradient: radial-gradient(at 44% 27%, #109d00 0px, transparent 50%), radial-gradient(at 25% 38%, #040e9b 0px, transparent 50%), radial-gradient(at 49% 13%, #1e9772 0px, transparent 50%), radial-gradient(at 89% 83%, #8e0f83 0px, transparent 50%), radial-gradient(at 97% 57%, #c9a800 0px, transparent 50%), radial-gradient(at 80% 38%, #bc1214 0px, transparent 50%), radial-gradient(at 29% 43%, #b2003b 0px, transparent 50%), radial-gradient(at 25% 87%, #02867b 0px, transparent 50%);
+	--hero-mesh-cloud: radial-gradient(at 44% 27%, #109d00 0px, transparent 50%), radial-gradient(at 25% 38%, var(--primary) 0px, transparent 50%), radial-gradient(at 49% 13%, #1e9772 0px, transparent 50%), radial-gradient(at 89% 83%, var(--primary) 0px, transparent 50%), radial-gradient(at 97% 57%, var(--primary) 0px, transparent 50%), radial-gradient(at 80% 38%, var(--primary) 0px, transparent 50%), radial-gradient(at 29% 43%, var(--primary) 0px, transparent 50%), radial-gradient(at 25% 87%, #02867b 0px, transparent 50%);
+
 	font-family: "Overpass", serif;
 	background-color: var(--dark-level-2);
 }
@@ -40,6 +45,7 @@ main {
 
 section {
 	scroll-snap-align: start;
+	overflow-y: hidden;
 }
 
 h1 {
@@ -62,6 +68,9 @@ p {
 .bolder {
 	font-weight: bolder;
 	color: var(--primary);
+	background-clip: text !important;
+	-webkit-text-fill-color: #00000000;
+	background: linear-gradient(90deg, var(--mint), var(--primary));
 }
 
 .profile {
@@ -77,6 +86,58 @@ img {
 	object-fit: cover;
 }
 
+button {
+	margin-block: 1rem;
+	background: var(--secondary);
+	border: none;
+	padding: 1rem;
+	font-size: 1.2em;
+	font-weight: bold;
+	position: relative;
+	cursor: pointer;
+	border-radius: 1rem;
+}
+
+button::before {
+	content: "";
+	border-radius: 1rem;
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(0.9);
+	background: transparent;
+	border: 0.01rem solid var(--tertiary);
+	transition: transform 300ms ease-out;
+	z-index: -1;
+}
+
+button:hover::before {
+	transform: translate(0.5rem, 0.5rem) scale(1);
+}
+
+.glower {
+	background: var(--dark-level-3);
+	position: relative;
+}
+
+.glower::before {
+	content: "";
+	position: absolute;
+	inset: -0.1rem;
+	z-index: -1;
+	border-radius: inherit;
+	background: var(--dark-level-2);
+}
+
+.glower:hover {
+	background: radial-gradient(circle at var(--x) var(--y), hsla(0, 0%, 100%, 0.1), transparent 5rem), var(--dark-level-3);
+}
+
+.glower:hover::before {
+	background: radial-gradient(circle at var(--x) var(--y), hsl(0, 0%, 100%), transparent 5rem), var(--dark-level-2);
+}
+
 iconify-icon {
 	color: var(--primary);
 }
@@ -86,7 +147,7 @@ iconify-icon {
 		font-size: 80%;
 	}
 
-	aside {
+	.desktop-only {
 		display: none !important;
 	}
 }
