@@ -40,6 +40,11 @@ section#hero {
 	width: 100%;
 }
 
+.hero .hero-image img {
+	object-fit: cover;
+	width: 100%;
+}
+
 
 #cifras {
 	display: flex;
