@@ -2,6 +2,7 @@
 @import url(styles/hero.css);
 @import url(styles/card.css);
 @import url(styles/controllers.css);
+@import url(styles/flexbox-utility.css);
 
 
 .jetbrains-mono-ft {
@@ -35,6 +36,8 @@
 
 	font-family: "Overpass", serif;
 	background-color: var(--dark-level-2);
+
+	color: var(--primary);
 }
 
 main {

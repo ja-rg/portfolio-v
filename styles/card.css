@@ -1,13 +1,9 @@
 section#academic {
 	padding: 4rem;
 	min-height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
 }
+
+
 
 .card {
 	padding: clamp(0.8rem, 2vw, 1.5rem);
@@ -64,6 +60,15 @@ section#academic {
 	/* Prevents shrinking in flex */
 }
 
+.card .card-date {
+	color: var(--tertiary);
+}
+
+.container {
+	border-radius: 1rem;
+	background: linear-gradient(159deg, rgba(2, 0, 36, 1) 0%, rgba(54, 54, 60, 1) 100%);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 600px) {
 	.card {
@@ -72,9 +77,4 @@ section#academic {
 		align-items: center;
 		text-align: center;
 	}
-}
-
-
-.card .card-date {
-	color: var(--tertiary);
 }

@@ -1,0 +1,22 @@
+.simple-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.simple-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.layout-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.p {
+    padding: 1rem;
+}
