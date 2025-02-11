@@ -67,23 +67,30 @@
 
 			</aside>
 		</section>
-		<section id="academic">
-			<template x-for="academic in portfolio?.education ?? []">
-				<article class="card">
-					<div class="card-image">
-						<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
-					</div>
-					<div class="card-content">
-						<h3 class="card-title" x-text="academic?.degree[lang]"></h3>
-						<span class="card-date">
-							<time :datetime="academic?.first_year" x-text="academic?.first_year"></time>-<time
-								:datetime="academic?.last_year" academic?.last_year>2024</time>
-						</span>
-					</div>
-					<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24"
-						height="24"></iconify-icon>
-				</article>
-			</template>
+		<section id="academic" class="simple-flex layout-center">
+			<div class="simple-grid p" id="degrees">
+				<template x-for="academic in portfolio?.education ?? []">
+					<article class="card">
+						<div class="card-image">
+							<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
+						</div>
+						<div class="card-content">
+							<h3 class="card-title" x-text="academic?.degree[lang]"></h3>
+							<span class="card-date">
+								<time :datetime="academic?.first_year" x-text="academic?.first_year"></time>-<time
+									:datetime="academic?.last_year" academic?.last_year>2024</time>
+							</span>
+						</div>
+						<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24"
+							height="24"></iconify-icon>
+					</article>
+				</template>
+			</div>
+			<div class="simple-grid p container">
+				<template x-for="skill in portfolio?.expertise[lang] ?? []">
+					<div class="card" x-text="skill"></div>
+				</template>
+			</div>
 		</section>
 
 	</main>
