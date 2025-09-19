@@ -17,9 +17,9 @@
 		"location": "Ciudad de México, México"
 	},
 	"about": {
-		"en": "Passionate Software Engineer specializing in AI, immersive technologies, and full‑stack development. Currently pursuing a Master's in Cybersecurity while building VR/AR apps and intelligent systems.",
-		"es": "Ingeniero de software especializado en IA, tecnologías inmersivas y desarrollo full‑stack. Actualmente cursando una Maestría en Ciberseguridad y construyendo apps VR/AR y sistemas inteligentes.",
-		"fr": "Ingénieur logiciel spécialisé en IA, technologies immersives et développement full‑stack. En Master de cybersécurité, je crée des apps VR/AR et des systèmes intelligents."
+		"en": "Passionate Software Engineer specializing in AI, immersive technologies, and full-stack development. Currently pursuing a Master's in Cybersecurity while building VR/AR apps and intelligent systems.",
+		"es": "Ingeniero de software especializado en IA, tecnologías inmersivas y desarrollo full-stack. Actualmente cursando una Maestría en Ciberseguridad y construyendo apps VR/AR y sistemas inteligentes.",
+		"fr": "Ingénieur logiciel spécialisé en IA, technologies immersives et développement full-stack. En Master de cybersécurité, je crée des apps VR/AR et des systèmes intelligents."
 	},
 	"stats": [
 		{
@@ -49,7 +49,7 @@
 	],
 	"expertise": {
 		"en": [
-			"Full‑Stack Web Development",
+			"Full-Stack Web Development",
 			"Artificial Intelligence & Machine Learning",
 			"Immersive Technologies (VR/AR/MR)",
 			"Cloud Computing & DevOps",
@@ -58,7 +58,7 @@
 			"Network & Cybersecurity"
 		],
 		"es": [
-			"Desarrollo Web Full‑Stack",
+			"Desarrollo Web Full-Stack",
 			"Inteligencia Artificial y Machine Learning",
 			"Tecnologías Inmersivas (VR/AR/MR)",
 			"Computación en la Nube y DevOps",
@@ -67,7 +67,7 @@
 			"Redes y Ciberseguridad"
 		],
 		"fr": [
-			"Développement Web Full‑Stack",
+			"Développement Web Full-Stack",
 			"Intelligence Artificielle et Machine Learning",
 			"Technologies immersives (VR/AR/MR)",
 			"Cloud Computing et DevOps",
@@ -106,7 +106,7 @@
 			"details": {
 				"en": "Relevant courses: Cryptography, Network Security, IT Infrastructure & Platform Security",
 				"es": "Cursos relevantes: Criptografía, Seguridad en Redes, Seguridad de Infraestructura y Plataformas TI",
-				"fr": "Cours pertinents : Cryptographie, Sécurité réseau, Sécurité des infrastructures et plates‑formes TI"
+				"fr": "Cours pertinents : Cryptographie, Sécurité réseau, Sécurité des infrastructures et plates-formes TI"
 			}
 		}
 	],
@@ -123,7 +123,7 @@
 			"responsibilities": {
 				"en": [
 					"Develop immersive applications using MetaQuest, Bhaptics, UnitreeGo",
-					"Build AI‑powered experiences with VR/AR and emerging tech",
+					"Build AI-powered experiences with VR/AR and emerging tech",
 					"Lead mature DevOps practices and cloud deployments"
 				],
 				"es": [
@@ -150,18 +150,18 @@
 			"responsibilities": {
 				"en": [
 					"Developed and maintained web apps with JavaScript, SQL and PHP",
-					"Collaborated with cross‑functional teams to design technical solutions",
-					"Deployed apps to production and managed on‑prem/cloud servers"
+					"Collaborated with cross-functional teams to design technical solutions",
+					"Deployed apps to production and managed on-prem/cloud servers"
 				],
 				"es": [
 					"Desarrollo y mantenimiento de aplicaciones web con JavaScript, SQL y PHP",
 					"Colaboración con equipos multifuncionales para diseñar soluciones técnicas",
-					"Despliegue a producción y gestión de servidores on‑premise y nube"
+					"Despliegue a producción y gestión de servidores on-premise y nube"
 				],
 				"fr": [
 					"Développement et maintenance d'applications web (JavaScript, SQL, PHP)",
-					"Collaboration inter‑équipes pour concevoir des solutions techniques",
-					"Déploiement en production et gestion de serveurs on‑premise et cloud"
+					"Collaboration inter-équipes pour concevoir des solutions techniques",
+					"Déploiement en production et gestion de serveurs on-premise et cloud"
 				]
 			}
 		}
@@ -190,20 +190,20 @@
 			],
 			"features": {
 				"en": [
-					"AI‑powered automatic curriculum generation",
-					"Multi‑role system with granular permissions",
+					"AI-powered automatic curriculum generation",
+					"Multi-role system with granular permissions",
 					"Executive dashboard with institutional metrics",
 					"Management of faculties, programs and subjects"
 				],
 				"es": [
 					"Generación automática de currículos con IA",
-					"Sistema multi‑rol con permisos granulares",
+					"Sistema multi-rol con permisos granulares",
 					"Dashboard ejecutivo con métricas institucionales",
 					"Gestión de facultades, carreras y materias"
 				],
 				"fr": [
 					"Génération automatique de cursus par IA",
-					"Système multi‑rôle avec permissions granulaires",
+					"Système multi-rôle avec permissions granulaires",
 					"Tableau de bord exécutif avec métriques",
 					"Gestion des facultés, filières et matières"
 				]
