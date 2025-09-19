@@ -5,8 +5,67 @@
 		"fr": "À propos de moi"
 	},
 	"greeting": {
-		"en": "Hello, I am",
+		"en": "Hello, I'm",
 		"es": "Hola, soy",
 		"fr": "Bonjour, je suis"
+	},
+	"cta": {
+		"en": "Let's build the future together",
+		"es": "Construyamos el futuro juntos",
+		"fr": "Construisons l'avenir ensemble"
+	},
+	"sections": {
+		"experience": {
+			"en": "Experience",
+			"es": "Experiencia",
+			"fr": "Expérience"
+		},
+		"projects": {
+			"en": "Featured Projects",
+			"es": "Proyectos Destacados", 
+			"fr": "Projets Vedettes"
+		},
+		"skills": {
+			"en": "Technical Skills",
+			"es": "Habilidades Técnicas",
+			"fr": "Compétences Techniques"
+		},
+		"certifications": {
+			"en": "Certifications",
+			"es": "Certificaciones",
+			"fr": "Certifications"
+		},
+		"education": {
+			"en": "Education",
+			"es": "Educación",
+			"fr": "Éducation"
+		},
+		"contact": {
+			"en": "Get in Touch",
+			"es": "Contacto",
+			"fr": "Contact"
+		}
+	},
+	"actions": {
+		"view_project": {
+			"en": "View Project",
+			"es": "Ver Proyecto",
+			"fr": "Voir Projet"
+		},
+		"download_resume": {
+			"en": "Download Resume",
+			"es": "Descargar CV",
+			"fr": "Télécharger CV"
+		},
+		"contact_me": {
+			"en": "Contact Me",
+			"es": "Contáctame",
+			"fr": "Me Contacter"
+		},
+		"view_cert": {
+			"en": "View Certificate",
+			"es": "Ver Certificado",
+			"fr": "Voir Certificat"
+		}
 	}
 }

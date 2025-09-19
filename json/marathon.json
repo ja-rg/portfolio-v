@@ -1,0 +1,190 @@
+{
+    "nombre": {
+        "full_legal": "Jesús Alejandro Rosales González",
+        "prefered": "Alejandro Rosales"
+    },
+    "contact": {
+        "email": "macpolotora@gmail.com",
+        "phone": "+52 55 6805 1332",
+        "github": "https://github.com/ja-rg",
+        "linkedin": "https://www.linkedin.com/in/j-alejandro-rosales-g/",
+        "location": "Ciudad de México, México",
+        "website": "https://ja-rg.github.io/",
+        "portfolio": "https://ja-rg.github.io/",
+        "social": {
+            "facebook": "https://www.facebook.com/NadaZhiFX/"
+        }
+    },
+    "education": {
+        "degrees": [
+            {
+                "degree": "Ingeniería Cibernética y Sistemas Computacionales",
+                "institution": "Universidad La Salle México",
+                "location": "Ciudad de México, México",
+                "start_date": "2020-08",
+                "end_date": "2024-07",
+                "details": [
+                    "Promedio: 9.5/10.0",
+                    "Cursos relevantes: Estructura de Datos, Programación Orientada a Objetos, Bases de Datos, Tecnología de Redes Convergentes, Desarrollo Web, Inteligencia Artificial, Compiladores y Traductores."
+                ]
+            },
+            {
+                "degree": "Maestría en Ciberseguridad",
+                "institution": "Universidad La Salle México",
+                "location": "Ciudad de México, México",
+                "start_date": "2025-08",
+                "end_date": "2027-07",
+                "details": [
+                    "Cursos relevantes: Criptografía, Seguridad en Redes, Seguridad en Infraestructuras y Plataformas de TI."
+                ]
+            }
+        ],
+        "badges": [
+            {
+                "name": "CCNA: Introduction to Networks",
+                "issuer": "Cisco",
+                "date": "11/19/2022",
+                "credential_id": "c6680c35-68c9-40fc-8792-5e0a22983b18",
+                "url": "https://www.credly.com/badges/c6680c35-68c9-40fc-8792-5e0a22983b18/public_url"
+            },
+            {
+                "name": "Big Data Foundations - Level 1",
+                "issuer": "IBM",
+                "date": "8/16/2024",
+                "credential_id": "71bbaf2c-69ee-41d0-821e-0e197135a0b2",
+                "url": "https://www.credly.com/badges/71bbaf2c-69ee-41d0-821e-0e197135a0b2/public_url"
+            },
+            {
+                "name": "Databases and SQL for Data Science",
+                "issuer": "Coursera",
+                "date": "11/3/2024",
+                "credential_id": "f2dd8cd4-a33c-4b48-b2d9-bfde7df0a5a0",
+                "url": "https://www.credly.com/badges/f2dd8cd4-a33c-4b48-b2d9-bfde7df0a5a0/public_url"
+            },
+            {
+                "name": "Data Science Foundations - Level 1",
+                "issuer": "IBM",
+                "date": "10/18/2024",
+                "credential_id": "c0d4dae0-c67a-43c3-a4c4-26a49982beda",
+                "url": "https://www.credly.com/badges/c0d4dae0-c67a-43c3-a4c4-26a49982beda/public_url"
+            },
+            {
+                "name": "Statistics 101",
+                "issuer": "IBM",
+                "date": "9/16/2024",
+                "credential_id": "2efe9c2b-b971-40fc-9a3a-e2c5bd07bd0f",
+                "url": "https://www.credly.com/badges/2efe9c2b-b971-40fc-9a3a-e2c5bd07bd0f/public_url"
+            }
+        ],
+        "certifications": [{
+            "name": "Sistemas digitales avanzados para la computación y el diseño gráfico",
+            "issuer": "Centro de Computación Profesional de México",
+            "date": "FEBRERO 2016 A JUNIO 2017"
+        }]
+    },
+    "experience": [
+        {
+            "position": "Desarrollador de Software",
+            "company": "Universidad La Salle México",
+            "location": "Ciudad de México, México",
+            "start_date": "2022-02",
+            "end_date": "2024-12",
+            "responsibilities": [
+                "Desarrollo y mantenimiento de aplicaciones web utilizando JavaScript, SQL y PHP.",
+                "Colaboración con equipos multifuncionales para diseñar soluciones técnicas que cumplan con los requisitos del proyecto.",
+                "Despliegue de aplicaciones en entornos de producción y gestión de servidores on-premise y en la nube."
+            ]
+        },
+        {
+            "position": "Desarrollador de Proyectos de Inmersión",
+            "company": "Universidad La Salle México",
+            "location": "Ciudad de México, México",
+            "start_date": "2025-01",
+            "responsibilities": [
+                "Desarrollo de proyectos de inmersión utilizando tecnologías como MetaQuest, Bhaptics, UnitreeGo, entre otras.",
+                "Implementación de experiencias interactivas para mejorar el aprendizaje y la participación de los usuarios.",
+                "Desarrollo de aplicaciones basadas en IA, realidad virtual, aumentada y otras tecnologías emergentes.",
+                "DevOps maduro y despliegue de aplicaciones en entornos de producción y en la nube."
+            ]
+        }
+    ],
+    "skills": [
+        "JavaScript",
+        "Python",
+        "SQL",
+        "PHP",
+        "HTML/CSS",
+        "Java",
+        "Cloud Computing",
+        "C/C++",
+        "Git",
+        "Docker",
+        "Kubernetes",
+        "Linux",
+        "Redes y Seguridad Informática",
+        "Desarrollo Web",
+        "Inteligencia Artificial y Machine Learning",
+        "Realidad Virtual y Aumentada",
+        "Metaverso y Tecnologías Inmersivas"
+    ],
+    "languages": {
+        "Spanish": "Native",
+        "English": "Professional Proficiency",
+        "French": "Basic Knowledge"
+    },
+    "projects": [
+        {
+            "name": "PAAD - Checador de Profesor",
+            "description": "Herramienta diseñada para el registro y control de asistencia de profesores en la Universidad La Salle. Asegura que los profesores realicen el registro de su entrada y salida y proporciona herramientas de auditoría para supervisores.",
+            "technologies": ["JavaScript", "SQL", "PHP", "HTML/CSS"],
+            "features": [
+                "Registro de entrada de profesores",
+                "Base de datos segura con información del profesor",
+                "Herramientas de auditoría para supervisores"
+            ],
+            "url": "https://github.lci.ulsa.mx/PAAD/paad",
+            "date": "2022-2024"
+        },
+        {
+            "name": "Extracción de Calificaciones ULSA",
+            "description": "Sistema automatizado para la extracción de información de calificaciones de alumnos de la ULSA. Utiliza web scraping con Selenium para interactuar con la página de consulta de calificaciones y almacena los datos en PostgreSQL. Desplegado como servicio web con Flask y Waitress.",
+            "technologies": ["Python", "Selenium", "PostgreSQL", "Flask", "Waitress", "Pandas", "Chromium"],
+            "features": [
+                "Extracción automatizada de calificaciones mediante web scraping",
+                "Almacenamiento en base de datos PostgreSQL",
+                "API REST para extracciones remotas",
+                "Procesamiento de datos con Pandas y conversión a JSON"
+            ],
+            "url": "https://github.lci.ulsa.mx/Atenea/extraccion",
+            "date": "2022-2024"
+        },
+        {
+            "name": "Academic Management Platform - Sistema Universitario Inteligente",
+            "role": "Project Manager",
+            "description": "Plataforma integral de gestión académica universitaria con IA integrada para automatizar la creación y gestión de planes de estudio, asignaturas y estructura organizacional.",
+            "technologies": ["React 19", "TypeScript", "TanStack Router", "Supabase", "PostgreSQL", "Tailwind CSS", "IA API"],
+            "key_features": [
+                "Generación automática de planes de estudio con IA",
+                "Sistema multi-rol con permisos granulares",
+                "Dashboard ejecutivo con métricas institucionales",
+                "Gestión completa de facultades, carreras y asignaturas"
+            ],
+            "responsibilities": [
+                "Liderazgo del equipo de desarrollo",
+                "Definición de arquitectura y roadmap del proyecto",
+                "Coordinación con stakeholders académicos",
+                "Gestión de recursos y metodologías ágiles"
+            ],
+            "url": "https://github.lci.ulsa.mx/AlexRG/Acad-IA",
+            "date": "2024-2025"
+        }
+    ],
+    "interests": [
+        "Tecnologías Inmersivas (VR/AR/MR)",
+        "Inteligencia Artificial y Machine Learning",
+        "Ciberseguridad",
+        "Desarrollo de Software",
+        "Cloud Computing",
+        "Fotograífa y Diseño Gráfico"
+    ]
+}

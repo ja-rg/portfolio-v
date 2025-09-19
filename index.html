@@ -5,13 +5,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Portfolio</title>
+	<title>Alejandro Rosales - Software Engineer & AI/VR Developer</title>
+	<meta name="description" content="Software Engineer specializing in AI, VR/AR, and full-stack development. Available for Google and top-tier tech companies.">
+	<meta name="keywords" content="Software Engineer, AI Developer, VR Developer, Full Stack, Google, React, Python, Machine Learning">
 
+	<!-- Alpine.js for reactive components -->
 	<script defer src="//unpkg.com/alpinejs"></script>
+	<!-- Iconify for icons -->
 	<script defer src="//code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
-
+	<!-- Three.js for 3D graphics -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<!-- GSAP for animations -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,82 +32,518 @@
 		portfolio: null,
 		lang: `en`,
 		languages: [
-			{ code: 'en', name: 'English' },
-			{ code: 'es', name: 'Español' },
-			{ code: 'fr', name: 'Français' }
+			{ code: 'en', name: 'English', flag: '🇺🇸' },
+			{ code: 'es', name: 'Español', flag: '🇪🇸' },
+			{ code: 'fr', name: 'Français', flag: '🇫🇷' }
 		],
-		page: null
+		page: null,
+		activeSection: 'hero',
+		isMenuOpen: false
 	}" x-init="
 		portfolio = await (await fetch('json/portfolio.json')).json();
-		page = await (await fetch('json/page.json')).json()">
-		<div class="language-controller" tabindex="0">
-			<div class="language-options">
-				<template x-for="language in languages">
-					<button x-show="lang !== language.code" type="button" @click="lang = language.code">
-						<span x-text="language.name"></span>
-					</button>
-				</template>
+		page = await (await fetch('json/page.json')).json();
+		
+		// Initialize Three.js scene
+		initThreeJS();
+		
+		// Initialize scroll animations
+		initScrollAnimations();
+		
+		// Initialize intersection observer for sections
+		initSectionObserver();
+	">
+		
+		<!-- Navigation -->
+		<nav class="nav-bar" :class="{ 'nav-scrolled': activeSection !== 'hero' }">
+			<div class="nav-container">
+				<div class="nav-brand">
+					<span class="brand-text" x-text="portfolio?.name"></span>
+				</div>
+				
+				<div class="nav-links desktop-only">
+					<a href="#hero" @click="scrollToSection('hero')" :class="{ active: activeSection === 'hero' }">Home</a>
+					<a href="#about" @click="scrollToSection('about')" :class="{ active: activeSection === 'about' }">About</a>
+					<a href="#experience" @click="scrollToSection('experience')" :class="{ active: activeSection === 'experience' }">Experience</a>
+					<a href="#projects" @click="scrollToSection('projects')" :class="{ active: activeSection === 'projects' }">Projects</a>
+					<a href="#skills" @click="scrollToSection('skills')" :class="{ active: activeSection === 'skills' }">Skills</a>
+					<a href="#contact" @click="scrollToSection('contact')" :class="{ active: activeSection === 'contact' }">Contact</a>
+				</div>
+				
+				<div class="nav-actions">
+					<div class="language-controller">
+						<button class="lang-toggle" @click="isMenuOpen = !isMenuOpen">
+							<template x-for="language in languages">
+								<span x-show="lang === language.code" x-text="language.flag"></span>
+							</template>
+						</button>
+						<div class="language-options" x-show="isMenuOpen" @click.away="isMenuOpen = false">
+							<template x-for="language in languages">
+								<button x-show="lang !== language.code" @click="lang = language.code; isMenuOpen = false">
+									<span x-text="language.flag"></span>
+									<span x-text="language.name"></span>
+								</button>
+							</template>
+						</div>
+					</div>
+					<a href="mailto:macpolotora@gmail.com" class="btn btn-primary">
+						<iconify-icon icon="mdi:email-outline"></iconify-icon>
+						<span x-text="page?.actions?.contact_me[lang]"></span>
+					</a>
+				</div>
 			</div>
+		</nav>
 
-		</div>
-
-		<section id="hero">
-			<div class="hero">
-				<div class="hero-glare"></div>
+		<!-- Hero Section with 3D Background -->
+		<section id="hero" class="hero-section">
+			<div id="three-canvas"></div>
+			<div class="hero-overlay"></div>
+			
+			<div class="hero-content">
+				<div class="hero-text">
+					<div class="hero-greeting">
+						<span x-text="page?.greeting[lang]"></span>
+						<span class="hero-name" x-text="portfolio?.name"></span>
+					</div>
+					<h1 class="hero-title" x-text="portfolio?.title[lang]"></h1>
+					<p class="hero-description" x-text="portfolio?.about[lang]"></p>
+					
+					<div class="hero-actions">
+						<button class="btn btn-primary btn-large" @click="scrollToSection('projects')">
+							<iconify-icon icon="mdi:folder-open-outline"></iconify-icon>
+							<span x-text="page?.sections?.projects[lang]"></span>
+						</button>
+						<button class="btn btn-secondary btn-large" @click="scrollToSection('contact')">
+							<iconify-icon icon="mdi:account-outline"></iconify-icon>
+							<span x-text="page?.actions?.contact_me[lang]"></span>
+						</button>
+					</div>
+				</div>
+				
 				<div class="hero-image">
-					<img class="profile" :src="portfolio?.profile_image" alt="profile">
-				</div>
-				<div class="hero-content">
-					<p><span x-text="page?.greeting[lang]"></span> <em class="bolder" x-text="portfolio?.name"></em>.
-					</p>
-					<h1 x-text="portfolio?.title[lang]"></h1>
-					<p x-text="portfolio?.about[lang]"></p>
-					<button type="button"
-						@click="document.getElementById('academic').scrollIntoView({ behavior: 'smooth' })"><span
-							x-text="page?.about_page[lang]"></span>.</button>
+					<div class="profile-container">
+						<img class="profile-img" :src="portfolio?.profile_image" :alt="portfolio?.name">
+						<div class="profile-ring"></div>
+					</div>
 				</div>
 			</div>
-			<aside class="glower desktop-only" id="cifras">
-
+			
+			<!-- Stats Section -->
+			<div class="hero-stats">
 				<template x-for="stat in portfolio?.stats ?? []">
-					<div>
-						<h2 x-text="stat.value"></h2>
-						<p x-text="stat[lang]"></p>
+					<div class="stat-item">
+						<div class="stat-value" x-text="stat.value"></div>
+						<div class="stat-label" x-text="stat[lang]"></div>
 					</div>
 				</template>
-
-				<div class="overlay" aria-hidden="true"></div>
-
-			</aside>
-		</section>
-		<section id="academic" class="simple-flex layout-center">
-			<div class="simple-grid p" id="degrees">
-				<template x-for="academic in portfolio?.education ?? []">
-					<article class="card">
-						<div class="card-image">
-							<img alt="La Salle" width="40" height="40" src="assets/ulsa.png">
-						</div>
-						<div class="card-content">
-							<h3 class="card-title" x-text="academic?.degree[lang]"></h3>
-							<span class="card-date">
-								<time :datetime="academic?.first_year" x-text="academic?.first_year"></time>-<time
-									:datetime="academic?.last_year" academic?.last_year>2024</time>
-							</span>
-						</div>
-						<iconify-icon class="continue" icon="cuida:arrow-right-outline" width="24"
-							height="24"></iconify-icon>
-					</article>
-				</template>
-			</div>
-			<div class="simple-grid p container">
-				<template x-for="skill in portfolio?.expertise[lang] ?? []">
-					<div class="card" x-text="skill"></div>
-				</template>
 			</div>
 		</section>
 
+		<!-- About Section -->
+		<section id="about" class="section about-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.about_page[lang]"></h2>
+					<p class="section-subtitle">Passionate about creating innovative solutions with cutting-edge technology</p>
+				</div>
+				
+				<div class="about-grid">
+					<div class="about-text">
+						<div class="text-content">
+							<p x-text="portfolio?.about[lang]"></p>
+							<div class="contact-info">
+								<div class="contact-item">
+									<iconify-icon icon="mdi:map-marker-outline"></iconify-icon>
+									<span x-text="portfolio?.contact?.location"></span>
+								</div>
+								<div class="contact-item">
+									<iconify-icon icon="mdi:email-outline"></iconify-icon>
+									<span x-text="portfolio?.contact?.email"></span>
+								</div>
+								<div class="contact-item">
+									<iconify-icon icon="mdi:phone-outline"></iconify-icon>
+									<span x-text="portfolio?.contact?.phone"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="expertise-grid">
+						<template x-for="expertise in portfolio?.expertise[lang] ?? []">
+							<div class="expertise-card">
+								<iconify-icon icon="mdi:lightning-bolt-outline"></iconify-icon>
+								<span x-text="expertise"></span>
+							</div>
+						</template>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section -->
+		<section id="experience" class="section experience-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.experience[lang]"></h2>
+					<p class="section-subtitle">Professional journey and key achievements</p>
+				</div>
+				
+				<div class="timeline">
+					<template x-for="(exp, index) in portfolio?.experience ?? []">
+						<div class="timeline-item" :class="{ 'timeline-current': index === 0 }">
+							<div class="timeline-marker"></div>
+							<div class="timeline-content">
+								<div class="experience-header">
+									<h3 class="position-title" x-text="exp.position[lang]"></h3>
+									<div class="company-info">
+										<span class="company-name" x-text="exp.company"></span>
+										<span class="location" x-text="exp.location"></span>
+									</div>
+									<span class="duration" x-text="exp.years"></span>
+								</div>
+								<ul class="responsibilities">
+									<template x-for="responsibility in exp.responsibilities[lang] ?? []">
+										<li x-text="responsibility"></li>
+									</template>
+								</ul>
+							</div>
+						</div>
+					</template>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects Section -->
+		<section id="projects" class="section projects-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.projects[lang]"></h2>
+					<p class="section-subtitle">Showcasing innovation through impactful solutions</p>
+				</div>
+				
+				<div class="projects-grid">
+					<template x-for="project in portfolio?.projects ?? []">
+						<article class="project-card">
+							<div class="project-header">
+								<h3 class="project-title" x-text="project.title[lang]"></h3>
+								<span class="project-role" x-text="project.role" x-show="project.role"></span>
+							</div>
+							
+							<p class="project-description" x-text="project.description[lang]"></p>
+							
+							<div class="project-tech">
+								<template x-for="tech in project.technologies ?? []">
+									<span class="tech-tag" x-text="tech"></span>
+								</template>
+							</div>
+							
+							<div class="project-features" x-show="project.features">
+								<h4>Key Features:</h4>
+								<ul>
+									<template x-for="feature in project.features?.[lang] ?? []">
+										<li x-text="feature"></li>
+									</template>
+								</ul>
+							</div>
+							
+							<div class="project-actions">
+								<span class="project-date" x-text="project.date"></span>
+								<a :href="project.link" target="_blank" class="btn btn-outline" x-show="project.link">
+									<iconify-icon icon="mdi:open-in-new"></iconify-icon>
+									<span x-text="page?.actions?.view_project[lang]"></span>
+								</a>
+							</div>
+						</article>
+					</template>
+				</div>
+			</div>
+		</section>
+
+		<!-- Education Section -->
+		<section id="education" class="section education-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.education[lang]"></h2>
+					<p class="section-subtitle">Academic foundation and continuous learning</p>
+				</div>
+				
+				<div class="education-grid">
+					<template x-for="edu in portfolio?.education ?? []">
+						<div class="education-card">
+							<div class="education-header">
+								<img src="assets/ulsa.png" alt="Universidad La Salle" class="institution-logo">
+								<div class="education-info">
+									<h3 class="degree-title" x-text="edu.degree[lang]"></h3>
+									<p class="institution-name" x-text="edu.institution"></p>
+									<div class="education-meta">
+										<span class="education-years" x-text="`${edu.first_year} - ${edu.last_year}`"></span>
+										<span class="gpa" x-text="`GPA: ${edu.gpa}`" x-show="edu.gpa !== 'In Progress'"></span>
+									</div>
+								</div>
+							</div>
+							<p class="education-details" x-text="edu.details[lang]" x-show="edu.details"></p>
+						</div>
+					</template>
+				</div>
+			</div>
+		</section>
+
+		<!-- Skills Section -->
+		<section id="skills" class="section skills-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.skills[lang]"></h2>
+					<p class="section-subtitle">Technical expertise across multiple domains</p>
+				</div>
+				
+				<div class="skills-container">
+					<div class="skills-grid">
+						<template x-for="skill in portfolio?.skills[lang] ?? []">
+							<div class="skill-tag">
+								<span x-text="skill"></span>
+							</div>
+						</template>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Certifications Section -->
+		<section id="certifications" class="section certifications-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.certifications[lang]"></h2>
+					<p class="section-subtitle">Industry-recognized achievements and credentials</p>
+				</div>
+				
+				<div class="certifications-grid">
+					<template x-for="cert in portfolio?.certifications ?? []">
+						<div class="certification-card">
+							<div class="cert-icon" x-text="cert.icon"></div>
+							<div class="cert-content">
+								<h3 class="cert-title" x-text="cert.name"></h3>
+								<p class="cert-issuer" x-text="cert.issuer"></p>
+								<p class="cert-date" x-text="cert.date"></p>
+							</div>
+							<a :href="cert.url" target="_blank" class="cert-link" x-show="cert.url">
+								<iconify-icon icon="mdi:open-in-new"></iconify-icon>
+							</a>
+						</div>
+					</template>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="section contact-section">
+			<div class="container">
+				<div class="section-header">
+					<h2 class="section-title" x-text="page?.sections?.contact[lang]"></h2>
+					<p class="section-subtitle" x-text="page?.cta[lang]"></p>
+				</div>
+				
+				<div class="contact-content">
+					<div class="contact-links">
+						<a :href="`mailto:${portfolio?.contact?.email}`" class="contact-link">
+							<iconify-icon icon="mdi:email-outline"></iconify-icon>
+							<span x-text="portfolio?.contact?.email"></span>
+						</a>
+						<a :href="portfolio?.contact?.linkedin" target="_blank" class="contact-link">
+							<iconify-icon icon="mdi:linkedin"></iconify-icon>
+							<span>LinkedIn</span>
+						</a>
+						<a :href="portfolio?.contact?.github" target="_blank" class="contact-link">
+							<iconify-icon icon="mdi:github"></iconify-icon>
+							<span>GitHub</span>
+						</a>
+						<a :href="`tel:${portfolio?.contact?.phone}`" class="contact-link">
+							<iconify-icon icon="mdi:phone-outline"></iconify-icon>
+							<span x-text="portfolio?.contact?.phone"></span>
+						</a>
+					</div>
+					
+					<div class="languages-section">
+						<h3>Languages</h3>
+						<div class="languages-grid">
+							<template x-for="(level, language) in portfolio?.languages ?? {}">
+								<div class="language-item">
+									<span class="language-name" x-text="language"></span>
+									<span class="language-level" x-text="level"></span>
+								</div>
+							</template>
+						</div>
+					</div>
+					
+					<div class="interests-section">
+						<h3>Interests</h3>
+						<div class="interests-grid">
+							<template x-for="interest in portfolio?.interests[lang] ?? []">
+								<span class="interest-tag" x-text="interest"></span>
+							</template>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<p>&copy; 2025 <span x-text="portfolio?.name"></span>. Built with passion for innovation.</p>
+					<div class="footer-links">
+						<a :href="portfolio?.contact?.website" target="_blank">Portfolio</a>
+						<a :href="portfolio?.contact?.github" target="_blank">GitHub</a>
+						<a :href="portfolio?.contact?.linkedin" target="_blank">LinkedIn</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</main>
-</body>
-<script src="cursor-styles.js"></script>
 
+	<!-- Scripts -->
+	<script src="cursor-styles.js"></script>
+	<script>
+		// Three.js 3D Scene Setup
+		function initThreeJS() {
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+			const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+			
+			const canvas = document.getElementById('three-canvas');
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setClearColor(0x000000, 0);
+			canvas.appendChild(renderer.domElement);
+			
+			// Create geometric shapes
+			const geometries = [
+				new THREE.BoxGeometry(1, 1, 1),
+				new THREE.SphereGeometry(0.7, 32, 16),
+				new THREE.ConeGeometry(0.7, 1.5, 8),
+				new THREE.TorusGeometry(0.7, 0.2, 16, 100)
+			];
+			
+			const materials = [
+				new THREE.MeshPhongMaterial({ color: 0x4285f4, transparent: true, opacity: 0.7 }),
+				new THREE.MeshPhongMaterial({ color: 0x34a853, transparent: true, opacity: 0.7 }),
+				new THREE.MeshPhongMaterial({ color: 0xfbbc04, transparent: true, opacity: 0.7 }),
+				new THREE.MeshPhongMaterial({ color: 0xea4335, transparent: true, opacity: 0.7 })
+			];
+			
+			const meshes = [];
+			
+			for (let i = 0; i < 8; i++) {
+				const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+				const material = materials[Math.floor(Math.random() * materials.length)];
+				const mesh = new THREE.Mesh(geometry, material);
+				
+				mesh.position.set(
+					(Math.random() - 0.5) * 20,
+					(Math.random() - 0.5) * 20,
+					(Math.random() - 0.5) * 20
+				);
+				
+				mesh.rotation.set(
+					Math.random() * Math.PI,
+					Math.random() * Math.PI,
+					Math.random() * Math.PI
+				);
+				
+				scene.add(mesh);
+				meshes.push(mesh);
+			}
+			
+			// Lighting
+			const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+			scene.add(ambientLight);
+			
+			const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+			directionalLight.position.set(10, 10, 5);
+			scene.add(directionalLight);
+			
+			camera.position.z = 15;
+			
+			// Animation loop
+			function animate() {
+				requestAnimationFrame(animate);
+				
+				meshes.forEach((mesh, index) => {
+					mesh.rotation.x += 0.01 + index * 0.001;
+					mesh.rotation.y += 0.01 + index * 0.001;
+					mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
+				});
+				
+				camera.position.x = Math.sin(Date.now() * 0.0005) * 2;
+				camera.lookAt(scene.position);
+				
+				renderer.render(scene, camera);
+			}
+			
+			animate();
+			
+			// Handle window resize
+			window.addEventListener('resize', () => {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+			});
+		}
+		
+		// Smooth scrolling function
+		function scrollToSection(sectionId) {
+			document.getElementById(sectionId).scrollIntoView({ 
+				behavior: 'smooth',
+				block: 'start'
+			});
+		}
+		
+		// Initialize scroll animations
+		function initScrollAnimations() {
+			gsap.registerPlugin(ScrollTrigger);
+			
+			// Animate sections on scroll
+			gsap.utils.toArray('.section').forEach(section => {
+				gsap.fromTo(section, 
+					{ opacity: 0, y: 50 },
+					{
+						opacity: 1,
+						y: 0,
+						duration: 1,
+						scrollTrigger: {
+							trigger: section,
+							start: 'top 80%',
+							end: 'bottom 20%',
+							toggleActions: 'play none none reverse'
+						}
+					}
+				);
+			});
+		}
+		
+		// Section observer for navigation
+		function initSectionObserver() {
+			const sections = document.querySelectorAll('section[id]');
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						document.dispatchEvent(new CustomEvent('section-change', {
+							detail: { section: entry.target.id }
+						}));
+					}
+				});
+			}, { threshold: 0.3 });
+			
+			sections.forEach(section => observer.observe(section));
+			
+			document.addEventListener('section-change', (e) => {
+				const main = document.querySelector('main');
+				if (main.__x) {
+					main.__x.$data.activeSection = e.detail.section;
+				}
+			});
+		}
+		
+		// Global scroll function for Alpine.js
+		window.scrollToSection = scrollToSection;
+	</script>
+</body>
 </html>
