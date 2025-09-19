@@ -1,403 +1,211 @@
-{{
-
-	"name": "Alejandro Rosales",	"name": "Alejandro Rosales",
-
-	"full_name": "Jesús Alejandro Rosales González",	"profile_image": "assets/profile.jpg",
-
-	"profile_image": "assets/profile.jpg",	"title": {
-
-	"title": {		"en": "Cybernetics and Computational Systems Engineer",
-
-		"en": "Software Engineer & AI/VR Developer",		"es": "Ingeniero en Cibernética y Sistemas Computacionales",
-
-		"es": "Ingeniero de Software y Desarrollador IA/VR",		"fr": "Ingénieur en Cybernétique et Systèmes Informatiques"
-
-		"fr": "Ingénieur Logiciel et Développeur IA/VR"	},
-
-	},	"contact": {
-
-	"contact": {		"phone": [
-
-		"phone": "+52 55 6805 1332",			"+52 55 6805-1332",
-
-		"email": "macpolotora@gmail.com",			"+52 55 2235-7723"
-
-		"github": "https://github.com/ja-rg",		],
-
-		"linkedin": "https://www.linkedin.com/in/j-alejandro-rosales-g/",		"email": "j.alex.rosales@proton.me",
-
-		"website": "https://ja-rg.github.io/",		"website": "https://portfolio.alex2rg.lat",
-
-		"portfolio": "https://ja-rg.github.io/",		"linkedin": "https://www.linkedin.com/in/jesús-alejandro-rosalesgonzález-35069a140/"
-
-		"location": "Ciudad de México, México"	},
-
-	},	"about": {
-
-	"about": {		"en": "Passionate about technology and its ability to transform the world, I specialize in software development, cloud computing, and UI/UX design. My mission is to create intuitive, efficient, and scalable solutions.",
-
-		"en": "Passionate Software Engineer specializing in AI, immersive technologies, and full-stack development. Currently pursuing a Master's in Cybersecurity while developing cutting-edge VR/AR applications and intelligent systems. Experienced in leading cross-functional teams and delivering scalable solutions.",		"es": "Apasionado por la tecnología y su capacidad de transformar el mundo, me especializo en desarrollo de software, computación en la nube y diseño UI/UX. Mi misión es crear soluciones intuitivas, eficientes y escalables.",
-
-		"es": "Ingeniero de Software apasionado especializado en IA, tecnologías inmersivas y desarrollo full-stack. Actualmente cursando una Maestría en Ciberseguridad mientras desarrollo aplicaciones VR/AR de vanguardia y sistemas inteligentes. Experimentado en liderar equipos multifuncionales y entregar soluciones escalables.",		"fr": "Passionné par la technologie et son pouvoir de transformation, je me spécialise dans le développement logiciel, l'informatique en nuage et le design UI/UX. Ma mission est de créer des solutions intuitives, efficaces et évolutives."
-
-		"fr": "Ingénieur logiciel passionné spécialisé dans l'IA, les technologies immersives et le développement full-stack. Actuellement en Master en Cybersécurité tout en développant des applications VR/AR de pointe et des systèmes intelligents. Expérimenté dans la direction d'équipes cross-fonctionnelles et la livraison de solutions évolutives."	},
-
-	},	"stats": [
-
-	"stats": [		{
-
-		{			"value": "4+",
-
-			"value": "5+",			"en": "Years of Experience",
-
-			"en": "Years Experience",			"es": "Años de Experiencia",
-
-			"es": "Años de Experiencia",			"fr": "Années d'Expérience"
-
-			"fr": "Années d'Expérience"		},
-
-		},		{
-
-		{			"value": "10+",
-
-			"value": "15+",			"en": "Projects",
-
-			"en": "Projects Delivered",			"es": "Proyectos",
-
-			"es": "Proyectos Entregados",			"fr": "Projets"
-
-			"fr": "Projets Livrés"		},
-
-		},		{
-
-		{			"value": "5+",
-
-			"value": "9.5/10",			"en": "Certifications",
-
-			"en": "Academic GPA",			"es": "Certificaciones",
-
-			"es": "Promedio Académico",			"fr": "Certifications"
-
-			"fr": "Moyenne Académique"		},
-
-		},		{
-
-		{			"value": "2+",
-
-			"value": "6+",			"en": "Clients",
-
-			"en": "Certifications",			"es": "Clientes",
-
-			"es": "Certificaciones",			"fr": "Clients"
-
-			"fr": "Certifications"		}
-
-		}	],
-
-	],	"expertise": {
-
-	"expertise": {		"en": [
-
-		"en": [			"Software Development (PHP, C++, C, JavaScript, C#, Python)",
-
-			"AI/Machine Learning Development",			"Computer Graphics & UI/UX Design",
-
-			"Immersive Technologies (VR/AR/MR)",			"Cloud Computing & Containerization",
-
-			"Full-Stack Web Development",			"Mathematical & Computational Physics",
-
-			"Cloud Computing & DevOps",			"Database Administration"
-
-			"Cybersecurity & Network Security",		],
-
-			"Data Science & Analytics"		"es": [
-
-		],			"Desarrollo de software (PHP, C++, C, JavaScript, C#, Python)",
-
-		"es": [			"Gráficos por computadora y diseño UI/UX",
-
-			"Desarrollo de IA/Machine Learning",			"Computación en la nube y contenedores",
-
-			"Tecnologías Inmersivas (VR/AR/MR)",			"Matemática y física computacionales",
-
-			"Desarrollo Web Full-Stack",			"Administración de bases de datos"
-
-			"Computación en la Nube y DevOps",		],
-
-			"Ciberseguridad y Seguridad de Redes",		"fr": [
-
-			"Ciencia de Datos y Análisis"			"Développement logiciel (PHP, C++, C, JavaScript, C#, Python)",
-
-		],			"Graphisme informatique et design UI/UX",
-
-		"fr": [			"Informatique en nuage et conteneurisation",
-
-			"Développement IA/Machine Learning",			"Mathématiques et physique computationnelles",
-
-			"Technologies Immersives (VR/AR/MR)",			"Administration de bases de données"
-
-			"Développement Web Full-Stack",		]
-
-			"Cloud Computing et DevOps",	},
-
-			"Cybersécurité et Sécurité Réseau",	"education": [
-
-			"Science des Données et Analyse"		{
-
-		]			"degree": {
-
-	},				"en": "Bachelor's Degree in Cybernetics and Computational Systems Engineering",
-
-	"education": [				"es": "Licenciatura en Ingeniería Cibernética y Sistemas Computacionales",
-
-		{				"fr": "Licence en Ingénierie Cybernétique et Systèmes Informatiques"
-
-			"degree": {			},
-
-				"en": "Master's in Cybersecurity (In Progress)",			"institution": "Universidad La Salle",
-
-				"es": "Maestría en Ciberseguridad (En Curso)",			"first_year": "2020",
-
-				"fr": "Master en Cybersécurité (En Cours)"			"last_year": "2024",
-
-			},			"gpa": "9.57"
-
-			"institution": "Universidad La Salle México",		},
-
-			"first_year": "2025",		{
-
-			"last_year": "2027",			"degree": {
-
-			"gpa": "In Progress",				"en": "High School Diploma",
-
-			"location": "Ciudad de México, México",				"es": "Preparatoria",
-
-			"details": {				"fr": "Baccalauréat"
-
-				"en": "Relevant courses: Cryptography, Network Security, IT Infrastructure and Platform Security",			},
-
-				"es": "Cursos relevantes: Criptografía, Seguridad en Redes, Seguridad en Infraestructuras y Plataformas de TI",			"institution": "Universidad La Salle",
-
-				"fr": "Cours pertinents: Cryptographie, Sécurité Réseau, Sécurité des Infrastructures et Plateformes TI"			"first_year": "2017",
-
-			}			"last_year": "2020",
-
-		},			"gpa": "9.12"
-
-		{		}
-
-			"degree": {	],
-
-				"en": "Bachelor's in Cybernetics and Computational Systems Engineering",	"experience": [
-
-				"es": "Ingeniería Cibernética y Sistemas Computacionales",		{
-
-				"fr": "Ingénierie Cybernétique et Systèmes Informatiques"			"position": {
-
-			},				"en": "Project Immersion Analyst",
-
-			"institution": "Universidad La Salle México",				"es": "Analista de Proyectos de Inmersión",
-
-			"first_year": "2020",				"fr": "Analyste de Projets d'Immersion"
-
-			"last_year": "2024",			},
-
-			"gpa": "9.5/10.0",			"company": "Universidad La Salle / Faculty of Engineering",
-
-			"location": "Ciudad de México, México",			"years": "Jan 2025 – Present"
-
-			"details": {		},
-
-				"en": "Relevant courses: Data Structures, OOP, Databases, Network Technologies, Web Development, AI, Compilers",		{
-
-				"es": "Cursos relevantes: Estructura de Datos, POO, Bases de Datos, Tecnología de Redes, Desarrollo Web, IA, Compiladores",			"position": {
-
-				"fr": "Cours pertinents: Structures de Données, POO, Bases de Données, Technologies Réseau, Développement Web, IA, Compilateurs"				"en": "Programmer",
-
-			}				"es": "Programador",
-
-		}				"fr": "Programmeur"
-
-	],			},
-
-	"experience": [			"company": "Universidad La Salle / Faculty of Engineering",
-
-		{			"years": "Feb 2022 – Dec 2024"
-
-			"position": {		}
-
-				"en": "Immersion Projects Developer",	],
-
-				"es": "Desarrollador de Proyectos de Inmersión",	"projects": [
-
-				"fr": "Développeur de Projets d'Immersion"		{
-
-			},			"title": {
-
-			"company": "Universidad La Salle México",				"en": "Web Designer",
-
-			"location": "Ciudad de México, México",				"es": "Diseñador de páginas web",
-
-			"years": "Jan 2025 – Present",				"fr": "Concepteur Web"
-
-			"responsibilities": {			},
-
-				"en": [			"description": {
-
-					"Develop immersive applications using MetaQuest, Bhaptics, UnitreeGo technologies",				"en": "Front-end design for EAF company website.",
-
-					"Implement interactive experiences to enhance user learning and engagement",				"es": "Diseño FRONT-END de la página web de la empresa EAF.",
-
-					"Build AI-powered applications with VR/AR and emerging technologies",				"fr": "Conception FRONT-END du site Web de l'entreprise EAF."
-
-					"Manage mature DevOps practices and cloud deployment strategies"			},
-
-				],			"link": "https://www.estatusaf.com.mx/"
-
-				"es": [		},
-
-					"Desarrollo de aplicaciones inmersivas usando MetaQuest, Bhaptics, UnitreeGo",		{
-
-					"Implementación de experiencias interactivas para mejorar el aprendizaje",			"title": {
-
-					"Construcción de aplicaciones con IA, VR/AR y tecnologías emergentes",				"en": "Full Stack Developer",
-
-					"Gestión de DevOps maduro y estrategias de despliegue en la nube"				"es": "Desarrollador de sistemas",
-
-				],				"fr": "Développeur Full Stack"
-
-				"fr": [			},
-
-					"Développement d'applications immersives avec MetaQuest, Bhaptics, UnitreeGo",			"description": {
-
-					"Implémentation d'expériences interactives pour améliorer l'apprentissage",				"en": "Freelance Full Stack Development for Studially using NodeJS and VueJS.",
-
-					"Construction d'applications IA avec VR/AR et technologies émergentes",				"es": "Desarrollo Freelance Full Stack en Studially con NodeJS y VueJS.",
-
-					"Gestion DevOps mature et stratégies de déploiement cloud"				"fr": "Développement Full Stack Freelance pour Studially avec NodeJS et VueJS."
-
-				]			},
-
-			}			"link": "https://www.studially.com"
-
-		},		}
-
-		{	],
-
-			"position": {	"certifications": [
-
-				"en": "Software Developer",		{
-
-				"es": "Desarrollador de Software",			"year": "2024",
-
-				"fr": "Développeur Logiciel"			"title": "Databases and SQL for Data Science",
-
-			},			"link": "https://www.credly.com/badges/f2dd8cd4-a33c-4b48-b2d9-bfde7df0a5a0/public_url"
-
-			"company": "Universidad La Salle México",		},
-
-			"location": "Ciudad de México, México",		{
-
-			"years": "Feb 2022 – Dec 2024",			"year": "2024",
-
-			"responsibilities": {			"title": "Big Data Foundations - Level 1",
-
-				"en": [			"link": "https://www.credly.com/badges/71bbaf2c-69ee-41d0-821e-0e197135a0b2/public_url"
-
-					"Developed and maintained web applications using JavaScript, SQL, and PHP",		},
-
-					"Collaborated with cross-functional teams to design technical solutions",		{
-
-					"Deployed applications in production environments and managed on-premise and cloud servers"			"year": "2024",
-
-				],			"title": "Data Science Foundations - Level 1",
-
-				"es": [			"link": "https://www.credly.com/badges/c0d4dae0-c67a-43c3-a4c4-26a49982beda/public_url"
-
-					"Desarrollo y mantenimiento de aplicaciones web con JavaScript, SQL y PHP",		},
-
-					"Colaboración con equipos multifuncionales para diseñar soluciones técnicas",		{
-
-					"Despliegue de aplicaciones en producción y gestión de servidores on-premise y nube"			"year": "2022",
-
-				],			"title": "CCNA: Introduction to Networks",
-
-				"fr": [			"link": "https://www.credly.com/badges/c6680c35-68c9-40fc-8792-5e0a22983b18/public_url"
-
-					"Développement et maintenance d'applications web avec JavaScript, SQL et PHP",		}
-
-					"Collaboration avec équipes cross-fonctionnelles pour concevoir solutions techniques",	],
-
-					"Déploiement d'applications en production et gestion serveurs on-premise et cloud"	"skills": {
-
-				]		"en": [
-
-			}			"Data Analysis with Python",
-
-		}			"Fluent English Communication",
-
-	],			"Linux Administration",
-
-	"projects": [			"Adobe Suite (Photoshop, Illustrator)",
-
-		{			"Low-level C Programming for Linux",
-
-			"title": {			"Docker, Kubernetes",
-
-				"en": "Academic Management Platform - AI University System",			"Cloud Computing on Azure",
-
-				"es": "Plataforma de Gestión Académica - Sistema Universitario IA",			"UI/UX Design"
-
-				"fr": "Plateforme de Gestion Académique - Système Universitaire IA"		],
-
-			},		"es": [
-
-			"role": "Project Manager & Lead Developer",			"Análisis de datos con Python",
-
-			"description": {			"Comunicación fluida en inglés",
-
-				"en": "Comprehensive university academic management platform with integrated AI to automate curriculum creation and management, subjects, and organizational structure.",			"Administración de Linux",
-
-				"es": "Plataforma integral de gestión académica universitaria con IA integrada para automatizar la creación y gestión de planes de estudio, asignaturas y estructura organizacional.",			"Suite de Adobe (Photoshop, Illustrator)",
-
-				"fr": "Plateforme complète de gestion académique universitaire avec IA intégrée pour automatiser la création et gestion de cursus, matières et structure organisationnelle."			"Programación en C para Linux de bajo nivel",
-
-			},			"Docker, Kubernetes",
-
-			"technologies": ["React 19", "TypeScript", "TanStack Router", "Supabase", "PostgreSQL", "Tailwind CSS", "AI API"],			"Computación en la nube en Azure",
-
-			"features": {			"Diseño UI/UX"
-
-				"en": [		],
-
-					"AI-powered automatic curriculum generation",		"fr": [
-
-					"Multi-role system with granular permissions",			"Analyse de données avec Python",
-
-					"Executive dashboard with institutional metrics",			"Communication en anglais courante",
-
-					"Complete management of faculties, careers, and subjects"			"Administration Linux",
-
-				],			"Suite Adobe (Photoshop, Illustrator)",
-
-				"es": [			"Programmation en C pour Linux bas niveau",
-
-					"Generación automática de currículos con IA",			"Docker, Kubernetes",
-
-					"Sistema multi-rol con permisos granulares",			"Informatique en nuage sur Azure",
-
-					"Dashboard ejecutivo con métricas institucionales",			"Design UI/UX"
-
-					"Gestión completa de facultades, carreras y materias"		]
-
-				],	}
-
-				"fr": [}
-
-					"Génération automatique de cursus avec IA",
-					"Système multi-rôle avec permissions granulaires",
-					"Dashboard exécutif avec métriques institutionnelles",
-					"Gestion complète des facultés, carrières et matières"
+{
+	"name": "Alejandro Rosales",
+	"full_name": "Jesús Alejandro Rosales González",
+	"profile_image": "assets/profile.jpg",
+	"title": {
+		"en": "Software Engineer & AI/VR Developer",
+		"es": "Ingeniero de Software y Desarrollador IA/VR",
+		"fr": "Ingénieur logiciel IA/VR"
+	},
+	"contact": {
+		"email": "macpolotora@gmail.com",
+		"phone": "+52 55 6805 1332",
+		"github": "https://github.com/ja-rg",
+		"linkedin": "https://www.linkedin.com/in/j-alejandro-rosales-g/",
+		"website": "https://ja-rg.github.io/",
+		"portfolio": "https://ja-rg.github.io/",
+		"location": "Ciudad de México, México"
+	},
+	"about": {
+		"en": "Passionate Software Engineer specializing in AI, immersive technologies, and full‑stack development. Currently pursuing a Master's in Cybersecurity while building VR/AR apps and intelligent systems.",
+		"es": "Ingeniero de software especializado en IA, tecnologías inmersivas y desarrollo full‑stack. Actualmente cursando una Maestría en Ciberseguridad y construyendo apps VR/AR y sistemas inteligentes.",
+		"fr": "Ingénieur logiciel spécialisé en IA, technologies immersives et développement full‑stack. En Master de cybersécurité, je crée des apps VR/AR et des systèmes intelligents."
+	},
+	"stats": [
+		{
+			"value": "5+",
+			"en": "Years Experience",
+			"es": "Años de Experiencia",
+			"fr": "Années d'expérience"
+		},
+		{
+			"value": "15+",
+			"en": "Projects Delivered",
+			"es": "Proyectos Entregados",
+			"fr": "Projets livrés"
+		},
+		{
+			"value": "9.5/10",
+			"en": "Academic GPA",
+			"es": "Promedio Académico",
+			"fr": "Moyenne académique"
+		},
+		{
+			"value": "6+",
+			"en": "Certifications",
+			"es": "Certificaciones",
+			"fr": "Certifications"
+		}
+	],
+	"expertise": {
+		"en": [
+			"Full‑Stack Web Development",
+			"Artificial Intelligence & Machine Learning",
+			"Immersive Technologies (VR/AR/MR)",
+			"Cloud Computing & DevOps",
+			"Computer Graphics & UI/UX",
+			"Database Design & Administration",
+			"Network & Cybersecurity"
+		],
+		"es": [
+			"Desarrollo Web Full‑Stack",
+			"Inteligencia Artificial y Machine Learning",
+			"Tecnologías Inmersivas (VR/AR/MR)",
+			"Computación en la Nube y DevOps",
+			"Gráficos por Computadora y UI/UX",
+			"Diseño y Administración de Bases de Datos",
+			"Redes y Ciberseguridad"
+		],
+		"fr": [
+			"Développement Web Full‑Stack",
+			"Intelligence Artificielle et Machine Learning",
+			"Technologies immersives (VR/AR/MR)",
+			"Cloud Computing et DevOps",
+			"Graphisme informatique & UI/UX",
+			"Conception et administration de bases de données",
+			"Réseaux et cybersécurité"
+		]
+	},
+	"education": [
+		{
+			"degree": {
+				"en": "Bachelor's in Cybernetics & Computational Systems Engineering",
+				"es": "Licenciatura en Ingeniería Cibernética y Sistemas Computacionales",
+				"fr": "Licence en Ingénierie Cybernétique et Systèmes Informatiques"
+			},
+			"institution": "Universidad La Salle México",
+			"first_year": "2020",
+			"last_year": "2024",
+			"gpa": "9.5/10.0",
+			"details": {
+				"en": "Relevant courses: Data Structures, OOP, Databases, Network Technologies, Web Development, AI, Compilers",
+				"es": "Cursos relevantes: Estructura de Datos, POO, Bases de Datos, Tecnologías de Redes, Desarrollo Web, IA, Compiladores",
+				"fr": "Cours pertinents : Structures de données, POO, Bases de données, Technologies réseau, Développement Web, IA, Compilateurs"
+			}
+		},
+		{
+			"degree": {
+				"en": "Master's in Cybersecurity (In Progress)",
+				"es": "Maestría en Ciberseguridad (En curso)",
+				"fr": "Master en Cybersécurité (En cours)"
+			},
+			"institution": "Universidad La Salle México",
+			"first_year": "2025",
+			"last_year": "2027",
+			"gpa": "In Progress",
+			"details": {
+				"en": "Relevant courses: Cryptography, Network Security, IT Infrastructure & Platform Security",
+				"es": "Cursos relevantes: Criptografía, Seguridad en Redes, Seguridad de Infraestructura y Plataformas TI",
+				"fr": "Cours pertinents : Cryptographie, Sécurité réseau, Sécurité des infrastructures et plates‑formes TI"
+			}
+		}
+	],
+	"experience": [
+		{
+			"position": {
+				"en": "Immersion Projects Developer",
+				"es": "Desarrollador de Proyectos de Inmersión",
+				"fr": "Développeur de projets d'immersion"
+			},
+			"company": "Universidad La Salle México",
+			"location": "Ciudad de México, México",
+			"years": "Jan 2025 – Present",
+			"responsibilities": {
+				"en": [
+					"Develop immersive applications using MetaQuest, Bhaptics, UnitreeGo",
+					"Build AI‑powered experiences with VR/AR and emerging tech",
+					"Lead mature DevOps practices and cloud deployments"
+				],
+				"es": [
+					"Desarrollar aplicaciones inmersivas con MetaQuest, Bhaptics, UnitreeGo",
+					"Construir experiencias con IA y tecnologías VR/AR",
+					"Liderar prácticas DevOps y despliegues en la nube"
+				],
+				"fr": [
+					"Développer des applications immersives (MetaQuest, Bhaptics, UnitreeGo)",
+					"Créer des expériences IA avec VR/AR",
+					"Piloter les pratiques DevOps et déploiements cloud"
+				]
+			}
+		},
+		{
+			"position": {
+				"en": "Software Developer",
+				"es": "Desarrollador de Software",
+				"fr": "Développeur logiciel"
+			},
+			"company": "Universidad La Salle México",
+			"location": "Ciudad de México, México",
+			"years": "Feb 2022 – Dec 2024",
+			"responsibilities": {
+				"en": [
+					"Developed and maintained web apps with JavaScript, SQL and PHP",
+					"Collaborated with cross‑functional teams to design technical solutions",
+					"Deployed apps to production and managed on‑prem/cloud servers"
+				],
+				"es": [
+					"Desarrollo y mantenimiento de aplicaciones web con JavaScript, SQL y PHP",
+					"Colaboración con equipos multifuncionales para diseñar soluciones técnicas",
+					"Despliegue a producción y gestión de servidores on‑premise y nube"
+				],
+				"fr": [
+					"Développement et maintenance d'applications web (JavaScript, SQL, PHP)",
+					"Collaboration inter‑équipes pour concevoir des solutions techniques",
+					"Déploiement en production et gestion de serveurs on‑premise et cloud"
+				]
+			}
+		}
+	],
+	"projects": [
+		{
+			"title": {
+				"en": "Academic Management Platform - AI University System",
+				"es": "Plataforma de Gestión Académica - Sistema Universitario IA",
+				"fr": "Plateforme de gestion académique - Système universitaire IA"
+			},
+			"role": "Project Manager & Lead Developer",
+			"description": {
+				"en": "Comprehensive academic platform with integrated AI to automate curriculum creation and management.",
+				"es": "Plataforma académica integral con IA integrada para automatizar la creación y gestión de planes de estudio.",
+				"fr": "Plateforme académique complète avec IA intégrée pour automatiser la création et la gestion des cursus."
+			},
+			"technologies": [
+				"React 19",
+				"TypeScript",
+				"TanStack Router",
+				"Supabase",
+				"PostgreSQL",
+				"Tailwind CSS",
+				"AI API"
+			],
+			"features": {
+				"en": [
+					"AI‑powered automatic curriculum generation",
+					"Multi‑role system with granular permissions",
+					"Executive dashboard with institutional metrics",
+					"Management of faculties, programs and subjects"
+				],
+				"es": [
+					"Generación automática de currículos con IA",
+					"Sistema multi‑rol con permisos granulares",
+					"Dashboard ejecutivo con métricas institucionales",
+					"Gestión de facultades, carreras y materias"
+				],
+				"fr": [
+					"Génération automatique de cursus par IA",
+					"Système multi‑rôle avec permissions granulaires",
+					"Tableau de bord exécutif avec métriques",
+					"Gestion des facultés, filières et matières"
 				]
 			},
 			"link": "https://github.lci.ulsa.mx/AlexRG/Acad-IA",
@@ -407,32 +215,40 @@
 			"title": {
 				"en": "ULSA Grade Extraction System",
 				"es": "Sistema de Extracción de Calificaciones ULSA",
-				"fr": "Système d'Extraction des Notes ULSA"
+				"fr": "Système d'extraction des notes ULSA"
 			},
 			"description": {
-				"en": "Automated system for extracting student grade information from ULSA. Uses web scraping with Selenium to interact with the grade consultation page and stores data in PostgreSQL. Deployed as web service with Flask and Waitress.",
-				"es": "Sistema automatizado para la extracción de información de calificaciones de alumnos de la ULSA. Utiliza web scraping con Selenium para interactuar con la página de consulta de calificaciones y almacena los datos en PostgreSQL.",
-				"fr": "Système automatisé pour l'extraction d'informations de notes d'étudiants ULSA. Utilise web scraping avec Selenium pour interagir avec la page de consultation des notes et stocke les données dans PostgreSQL."
+				"en": "Automated system for extracting student grades using Selenium; stores data in PostgreSQL; Flask web service.",
+				"es": "Sistema automatizado para extracción de calificaciones con Selenium; almacena en PostgreSQL; servicio web Flask.",
+				"fr": "Système automatisé d'extraction des notes avec Selenium; stockage PostgreSQL; service web Flask."
 			},
-			"technologies": ["Python", "Selenium", "PostgreSQL", "Flask", "Waitress", "Pandas", "Chromium"],
+			"technologies": [
+				"Python",
+				"Selenium",
+				"PostgreSQL",
+				"Flask",
+				"Waitress",
+				"Pandas",
+				"Chromium"
+			],
 			"features": {
 				"en": [
-					"Automated grade extraction via web scraping",
-					"PostgreSQL database storage",
-					"REST API for remote extractions",
-					"Data processing with Pandas and JSON conversion"
+					"Automated grade extraction",
+					"PostgreSQL storage",
+					"REST API for remote extraction",
+					"Pandas processing & JSON"
 				],
 				"es": [
-					"Extracción automatizada de calificaciones mediante web scraping",
-					"Almacenamiento en base de datos PostgreSQL",
+					"Extracción automatizada",
+					"Almacenamiento PostgreSQL",
 					"API REST para extracciones remotas",
-					"Procesamiento de datos con Pandas y conversión a JSON"
+					"Procesamiento con Pandas y JSON"
 				],
 				"fr": [
-					"Extraction automatisée de notes via web scraping",
-					"Stockage base de données PostgreSQL",
+					"Extraction automatisée",
+					"Stockage PostgreSQL",
 					"API REST pour extractions distantes",
-					"Traitement données avec Pandas et conversion JSON"
+					"Traitement Pandas et JSON"
 				]
 			},
 			"link": "https://github.lci.ulsa.mx/Atenea/extraccion",
@@ -442,29 +258,34 @@
 			"title": {
 				"en": "PAAD - Professor Attendance System",
 				"es": "PAAD - Sistema de Asistencia de Profesores",
-				"fr": "PAAD - Système d'Assiduité des Professeurs"
+				"fr": "PAAD - Système d'assiduité des professeurs"
 			},
 			"description": {
-				"en": "Tool designed for registration and control of professor attendance at Universidad La Salle. Ensures professors register their entry and exit and provides audit tools for supervisors.",
-				"es": "Herramienta diseñada para el registro y control de asistencia de profesores en la Universidad La Salle. Asegura que los profesores realicen el registro de su entrada y salida y proporciona herramientas de auditoría para supervisores.",
-				"fr": "Outil conçu pour l'enregistrement et le contrôle de l'assiduité des professeurs à Universidad La Salle. Assure que les professeurs enregistrent leur entrée et sortie et fournit des outils d'audit pour les superviseurs."
+				"en": "Tool for professor attendance registration and auditing at Universidad La Salle.",
+				"es": "Herramienta para registro de asistencia de profesores y auditoría en la Universidad La Salle.",
+				"fr": "Outil d'enregistrement de l'assiduité des professeurs et d'audit à l'Université La Salle."
 			},
-			"technologies": ["JavaScript", "SQL", "PHP", "HTML/CSS"],
+			"technologies": [
+				"JavaScript",
+				"SQL",
+				"PHP",
+				"HTML/CSS"
+			],
 			"features": {
 				"en": [
-					"Professor entry registration",
-					"Secure database with professor information",
-					"Audit tools for supervisors"
+					"Entry registration",
+					"Secure professor database",
+					"Supervisor audit tools"
 				],
 				"es": [
-					"Registro de entrada de profesores",
-					"Base de datos segura con información del profesor",
-					"Herramientas de auditoría para supervisores"
+					"Registro de entradas",
+					"Base de datos segura",
+					"Herramientas de auditoría"
 				],
 				"fr": [
-					"Enregistrement d'entrée des professeurs",
-					"Base de données sécurisée avec informations professeur",
-					"Outils d'audit pour superviseurs"
+					"Enregistrement d'entrée",
+					"Base de données sécurisée",
+					"Outils d'audit"
 				]
 			},
 			"link": "https://github.lci.ulsa.mx/PAAD/paad",
@@ -598,9 +419,9 @@
 			"Réalité Virtuelle (VR)",
 			"Réalité Augmentée (AR)",
 			"Réalité Mixte (MR)",
-			"Technologies Métavers",
+			"Technologies du métavers",
 			"DevOps",
-			"Science des Données",
+			"Science des données",
 			"Selenium WebDriver",
 			"Flask/FastAPI",
 			"Supabase",
@@ -610,7 +431,7 @@
 	},
 	"languages": {
 		"Spanish": "Native",
-		"English": "Professional Proficiency", 
+		"English": "Professional Proficiency",
 		"French": "Basic Knowledge"
 	},
 	"interests": {
@@ -635,14 +456,14 @@
 			"Contribuciones Open Source"
 		],
 		"fr": [
-			"Technologies Immersives (VR/AR/MR)",
+			"Technologies immersives (VR/AR/MR)",
 			"Intelligence Artificielle et Machine Learning",
 			"Cybersécurité",
-			"Développement Logiciel",
+			"Développement logiciel",
 			"Cloud Computing",
-			"Photographie et Design Graphique",
-			"Technologies Émergentes",
-			"Contributions Open Source"
+			"Photographie & design graphique",
+			"Technologies émergentes",
+			"Contributions open source"
 		]
 	}
 }

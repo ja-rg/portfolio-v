@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Alejandro Rosales - Software Engineer & AI/VR Developer</title>
-	<meta name="description" content="Software Engineer specializing in AI, VR/AR, and full-stack development. Available for Google and top-tier tech companies.">
-	<meta name="keywords" content="Software Engineer, AI Developer, VR Developer, Full Stack, Google, React, Python, Machine Learning">
+	<meta name="description"
+		content="Software Engineer specializing in AI, VR/AR, and full-stack development. Available for Google and top-tier tech companies.">
+	<meta name="keywords"
+		content="Software Engineer, AI Developer, VR Developer, Full Stack, Google, React, Python, Machine Learning">
 
 	<!-- Alpine.js for reactive components -->
 	<script defer src="//unpkg.com/alpinejs"></script>
@@ -17,14 +19,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 	<!-- GSAP for animations -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-	
+
 	<link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	
+
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
@@ -52,23 +56,29 @@
 		// Initialize intersection observer for sections
 		initSectionObserver();
 	">
-		
+
 		<!-- Navigation -->
 		<nav class="nav-bar" :class="{ 'nav-scrolled': activeSection !== 'hero' }">
 			<div class="nav-container">
 				<div class="nav-brand">
 					<span class="brand-text" x-text="portfolio?.name"></span>
 				</div>
-				
+
 				<div class="nav-links desktop-only">
-					<a href="#hero" @click="scrollToSection('hero')" :class="{ active: activeSection === 'hero' }">Home</a>
-					<a href="#about" @click="scrollToSection('about')" :class="{ active: activeSection === 'about' }">About</a>
-					<a href="#experience" @click="scrollToSection('experience')" :class="{ active: activeSection === 'experience' }">Experience</a>
-					<a href="#projects" @click="scrollToSection('projects')" :class="{ active: activeSection === 'projects' }">Projects</a>
-					<a href="#skills" @click="scrollToSection('skills')" :class="{ active: activeSection === 'skills' }">Skills</a>
-					<a href="#contact" @click="scrollToSection('contact')" :class="{ active: activeSection === 'contact' }">Contact</a>
+					<a href="#hero" @click="scrollToSection('hero')"
+						:class="{ active: activeSection === 'hero' }">Home</a>
+					<a href="#about" @click="scrollToSection('about')"
+						:class="{ active: activeSection === 'about' }">About</a>
+					<a href="#experience" @click="scrollToSection('experience')"
+						:class="{ active: activeSection === 'experience' }">Experience</a>
+					<a href="#projects" @click="scrollToSection('projects')"
+						:class="{ active: activeSection === 'projects' }">Projects</a>
+					<a href="#skills" @click="scrollToSection('skills')"
+						:class="{ active: activeSection === 'skills' }">Skills</a>
+					<a href="#contact" @click="scrollToSection('contact')"
+						:class="{ active: activeSection === 'contact' }">Contact</a>
 				</div>
-				
+
 				<div class="nav-actions">
 					<div class="language-controller">
 						<button class="lang-toggle" @click="isMenuOpen = !isMenuOpen">
@@ -78,7 +88,8 @@
 						</button>
 						<div class="language-options" x-show="isMenuOpen" @click.away="isMenuOpen = false">
 							<template x-for="language in languages">
-								<button x-show="lang !== language.code" @click="lang = language.code; isMenuOpen = false">
+								<button x-show="lang !== language.code"
+									@click="lang = language.code; isMenuOpen = false">
 									<span x-text="language.flag"></span>
 									<span x-text="language.name"></span>
 								</button>
@@ -97,7 +108,7 @@
 		<section id="hero" class="hero-section">
 			<div id="three-canvas"></div>
 			<div class="hero-overlay"></div>
-			
+
 			<div class="hero-content">
 				<div class="hero-text">
 					<div class="hero-greeting">
@@ -106,7 +117,7 @@
 					</div>
 					<h1 class="hero-title" x-text="portfolio?.title[lang]"></h1>
 					<p class="hero-description" x-text="portfolio?.about[lang]"></p>
-					
+
 					<div class="hero-actions">
 						<button class="btn btn-primary btn-large" @click="scrollToSection('projects')">
 							<iconify-icon icon="mdi:folder-open-outline"></iconify-icon>
@@ -118,7 +129,7 @@
 						</button>
 					</div>
 				</div>
-				
+
 				<div class="hero-image">
 					<div class="profile-container">
 						<img class="profile-img" :src="portfolio?.profile_image" :alt="portfolio?.name">
@@ -126,7 +137,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!-- Stats Section -->
 			<div class="hero-stats">
 				<template x-for="stat in portfolio?.stats ?? []">
@@ -143,9 +154,10 @@
 			<div class="container">
 				<div class="section-header">
 					<h2 class="section-title" x-text="page?.about_page[lang]"></h2>
-					<p class="section-subtitle">Passionate about creating innovative solutions with cutting-edge technology</p>
+					<p class="section-subtitle">Passionate about creating innovative solutions with cutting-edge
+						technology</p>
 				</div>
-				
+
 				<div class="about-grid">
 					<div class="about-text">
 						<div class="text-content">
@@ -166,7 +178,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="expertise-grid">
 						<template x-for="expertise in portfolio?.expertise[lang] ?? []">
 							<div class="expertise-card">
@@ -186,7 +198,7 @@
 					<h2 class="section-title" x-text="page?.sections?.experience[lang]"></h2>
 					<p class="section-subtitle">Professional journey and key achievements</p>
 				</div>
-				
+
 				<div class="timeline">
 					<template x-for="(exp, index) in portfolio?.experience ?? []">
 						<div class="timeline-item" :class="{ 'timeline-current': index === 0 }">
@@ -219,7 +231,7 @@
 					<h2 class="section-title" x-text="page?.sections?.projects[lang]"></h2>
 					<p class="section-subtitle">Showcasing innovation through impactful solutions</p>
 				</div>
-				
+
 				<div class="projects-grid">
 					<template x-for="project in portfolio?.projects ?? []">
 						<article class="project-card">
@@ -227,15 +239,15 @@
 								<h3 class="project-title" x-text="project.title[lang]"></h3>
 								<span class="project-role" x-text="project.role" x-show="project.role"></span>
 							</div>
-							
+
 							<p class="project-description" x-text="project.description[lang]"></p>
-							
+
 							<div class="project-tech">
 								<template x-for="tech in project.technologies ?? []">
 									<span class="tech-tag" x-text="tech"></span>
 								</template>
 							</div>
-							
+
 							<div class="project-features" x-show="project.features">
 								<h4>Key Features:</h4>
 								<ul>
@@ -244,7 +256,7 @@
 									</template>
 								</ul>
 							</div>
-							
+
 							<div class="project-actions">
 								<span class="project-date" x-text="project.date"></span>
 								<a :href="project.link" target="_blank" class="btn btn-outline" x-show="project.link">
@@ -265,7 +277,7 @@
 					<h2 class="section-title" x-text="page?.sections?.education[lang]"></h2>
 					<p class="section-subtitle">Academic foundation and continuous learning</p>
 				</div>
-				
+
 				<div class="education-grid">
 					<template x-for="edu in portfolio?.education ?? []">
 						<div class="education-card">
@@ -275,8 +287,10 @@
 									<h3 class="degree-title" x-text="edu.degree[lang]"></h3>
 									<p class="institution-name" x-text="edu.institution"></p>
 									<div class="education-meta">
-										<span class="education-years" x-text="`${edu.first_year} - ${edu.last_year}`"></span>
-										<span class="gpa" x-text="`GPA: ${edu.gpa}`" x-show="edu.gpa !== 'In Progress'"></span>
+										<span class="education-years"
+											x-text="`${edu.first_year} - ${edu.last_year}`"></span>
+										<span class="gpa" x-text="`GPA: ${edu.gpa}`"
+											x-show="edu.gpa !== 'In Progress'"></span>
 									</div>
 								</div>
 							</div>
@@ -294,7 +308,7 @@
 					<h2 class="section-title" x-text="page?.sections?.skills[lang]"></h2>
 					<p class="section-subtitle">Technical expertise across multiple domains</p>
 				</div>
-				
+
 				<div class="skills-container">
 					<div class="skills-grid">
 						<template x-for="skill in portfolio?.skills[lang] ?? []">
@@ -314,7 +328,7 @@
 					<h2 class="section-title" x-text="page?.sections?.certifications[lang]"></h2>
 					<p class="section-subtitle">Industry-recognized achievements and credentials</p>
 				</div>
-				
+
 				<div class="certifications-grid">
 					<template x-for="cert in portfolio?.certifications ?? []">
 						<div class="certification-card">
@@ -340,7 +354,7 @@
 					<h2 class="section-title" x-text="page?.sections?.contact[lang]"></h2>
 					<p class="section-subtitle" x-text="page?.cta[lang]"></p>
 				</div>
-				
+
 				<div class="contact-content">
 					<div class="contact-links">
 						<a :href="`mailto:${portfolio?.contact?.email}`" class="contact-link">
@@ -360,7 +374,7 @@
 							<span x-text="portfolio?.contact?.phone"></span>
 						</a>
 					</div>
-					
+
 					<div class="languages-section">
 						<h3>Languages</h3>
 						<div class="languages-grid">
@@ -372,7 +386,7 @@
 							</template>
 						</div>
 					</div>
-					
+
 					<div class="interests-section">
 						<h3>Interests</h3>
 						<div class="interests-grid">
@@ -408,12 +422,12 @@
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 			const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-			
+
 			const canvas = document.getElementById('three-canvas');
 			renderer.setSize(window.innerWidth, window.innerHeight);
 			renderer.setClearColor(0x000000, 0);
 			canvas.appendChild(renderer.domElement);
-			
+
 			// Create geometric shapes
 			const geometries = [
 				new THREE.BoxGeometry(1, 1, 1),
@@ -421,65 +435,65 @@
 				new THREE.ConeGeometry(0.7, 1.5, 8),
 				new THREE.TorusGeometry(0.7, 0.2, 16, 100)
 			];
-			
+
 			const materials = [
 				new THREE.MeshPhongMaterial({ color: 0x4285f4, transparent: true, opacity: 0.7 }),
 				new THREE.MeshPhongMaterial({ color: 0x34a853, transparent: true, opacity: 0.7 }),
 				new THREE.MeshPhongMaterial({ color: 0xfbbc04, transparent: true, opacity: 0.7 }),
 				new THREE.MeshPhongMaterial({ color: 0xea4335, transparent: true, opacity: 0.7 })
 			];
-			
+
 			const meshes = [];
-			
+
 			for (let i = 0; i < 8; i++) {
 				const geometry = geometries[Math.floor(Math.random() * geometries.length)];
 				const material = materials[Math.floor(Math.random() * materials.length)];
 				const mesh = new THREE.Mesh(geometry, material);
-				
+
 				mesh.position.set(
 					(Math.random() - 0.5) * 20,
 					(Math.random() - 0.5) * 20,
 					(Math.random() - 0.5) * 20
 				);
-				
+
 				mesh.rotation.set(
 					Math.random() * Math.PI,
 					Math.random() * Math.PI,
 					Math.random() * Math.PI
 				);
-				
+
 				scene.add(mesh);
 				meshes.push(mesh);
 			}
-			
+
 			// Lighting
 			const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
 			scene.add(ambientLight);
-			
+
 			const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
 			directionalLight.position.set(10, 10, 5);
 			scene.add(directionalLight);
-			
+
 			camera.position.z = 15;
-			
+
 			// Animation loop
 			function animate() {
 				requestAnimationFrame(animate);
-				
+
 				meshes.forEach((mesh, index) => {
 					mesh.rotation.x += 0.01 + index * 0.001;
 					mesh.rotation.y += 0.01 + index * 0.001;
 					mesh.position.y += Math.sin(Date.now() * 0.001 + index) * 0.01;
 				});
-				
+
 				camera.position.x = Math.sin(Date.now() * 0.0005) * 2;
 				camera.lookAt(scene.position);
-				
+
 				renderer.render(scene, camera);
 			}
-			
+
 			animate();
-			
+
 			// Handle window resize
 			window.addEventListener('resize', () => {
 				camera.aspect = window.innerWidth / window.innerHeight;
@@ -487,22 +501,22 @@
 				renderer.setSize(window.innerWidth, window.innerHeight);
 			});
 		}
-		
+
 		// Smooth scrolling function
 		function scrollToSection(sectionId) {
-			document.getElementById(sectionId).scrollIntoView({ 
+			document.getElementById(sectionId).scrollIntoView({
 				behavior: 'smooth',
 				block: 'start'
 			});
 		}
-		
+
 		// Initialize scroll animations
 		function initScrollAnimations() {
 			gsap.registerPlugin(ScrollTrigger);
-			
+
 			// Animate sections on scroll
 			gsap.utils.toArray('.section').forEach(section => {
-				gsap.fromTo(section, 
+				gsap.fromTo(section,
 					{ opacity: 0, y: 50 },
 					{
 						opacity: 1,
@@ -518,7 +532,7 @@
 				);
 			});
 		}
-		
+
 		// Section observer for navigation
 		function initSectionObserver() {
 			const sections = document.querySelectorAll('section[id]');
@@ -531,9 +545,9 @@
 					}
 				});
 			}, { threshold: 0.3 });
-			
+
 			sections.forEach(section => observer.observe(section));
-			
+
 			document.addEventListener('section-change', (e) => {
 				const main = document.querySelector('main');
 				if (main.__x) {
@@ -541,9 +555,10 @@
 				}
 			});
 		}
-		
+
 		// Global scroll function for Alpine.js
 		window.scrollToSection = scrollToSection;
 	</script>
 </body>
+
 </html>
