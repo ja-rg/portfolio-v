@@ -43,8 +43,8 @@
 		{
 			"value": "6+",
 			"en": "Badges Earned",
-			"es": "Insignias Obtenidas",
-			"fr": "Badges obtenus"
+			"es": "Certificaciones",
+			"fr": "Certifications"
 		}
 	],
 	"expertise": {
@@ -113,7 +113,7 @@
 	"experience": [
 		{
 			"position": {
-				"en": "It",
+				"en": "Immersive Projects Developer",
 				"es": "Desarrollador de Proyectos de Inmersión",
 				"fr": "Développeur de projets d'immersion"
 			},
