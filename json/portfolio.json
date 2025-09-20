@@ -113,13 +113,13 @@
 	"experience": [
 		{
 			"position": {
-				"en": "Immersion Projects Developer",
+				"en": "It",
 				"es": "Desarrollador de Proyectos de Inmersión",
 				"fr": "Développeur de projets d'immersion"
 			},
 			"company": "Universidad La Salle México",
 			"location": "Ciudad de México, México",
-			"years": "Jan 2025 – Present",
+			"years": "Jan 2025 - Present",
 			"responsibilities": {
 				"en": [
 					"Develop immersive applications using MetaQuest, Bhaptics, UnitreeGo",
@@ -146,7 +146,7 @@
 			},
 			"company": "Universidad La Salle México",
 			"location": "Ciudad de México, México",
-			"years": "Feb 2022 – Dec 2024",
+			"years": "Feb 2022 - Dec 2024",
 			"responsibilities": {
 				"en": [
 					"Developed and maintained web apps with JavaScript, SQL and PHP",
@@ -169,7 +169,7 @@
 	"projects": [
 		{
 			"title": {
-				"en": "Academic Management Platform - AI University System",
+				"en": "Acad-IA - AI University System",
 				"es": "Plataforma de Gestión Académica - Sistema Universitario IA",
 				"fr": "Plateforme de gestion académique - Système universitaire IA"
 			},
