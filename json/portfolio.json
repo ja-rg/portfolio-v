@@ -43,8 +43,8 @@
 		{
 			"value": "6+",
 			"en": "Badges Earned",
-			"es": "Certificaciones",
-			"fr": "Certifications"
+			"es": "Badges Obtenidas",
+			"fr": "Badges obtenus"
 		}
 	],
 	"expertise": {
@@ -292,7 +292,7 @@
 			"date": "2022-2024"
 		}
 	],
-	"certifications": [
+	"badges": [
 		{
 			"name": "Databases and SQL for Data Science",
 			"issuer": "Coursera",
