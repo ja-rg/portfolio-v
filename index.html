@@ -42,7 +42,8 @@
 		],
 		page: null,
 		activeSection: 'hero',
-		isMenuOpen: false
+		isMenuOpen: false,
+		isMobileMenuOpen: false
 	}" x-init="
 		portfolio = await (await fetch('json/portfolio.json')).json();
 		page = await (await fetch('json/page.json')).json();
@@ -77,6 +78,34 @@
 						:class="{ active: activeSection === 'skills' }">Skills</a>
 					<a href="#contact" @click="scrollToSection('contact')"
 						:class="{ active: activeSection === 'contact' }">Contact</a>
+				</div>
+
+				<!-- Mobile Menu Button -->
+				<button class="mobile-menu-btn mobile-only" @click="isMobileMenuOpen = !isMobileMenuOpen">
+					<span class="hamburger-line" :class="{ 'active': isMobileMenuOpen }"></span>
+					<span class="hamburger-line" :class="{ 'active': isMobileMenuOpen }"></span>
+					<span class="hamburger-line" :class="{ 'active': isMobileMenuOpen }"></span>
+				</button>
+
+				<!-- Mobile Menu Overlay -->
+				<div class="mobile-menu-overlay" :class="{ 'active': isMobileMenuOpen }" @click="isMobileMenuOpen = false"></div>
+
+				<!-- Mobile Menu -->
+				<div class="mobile-menu" :class="{ 'active': isMobileMenuOpen }">
+					<div class="mobile-nav-links">
+						<a href="#hero" @click="scrollToSection('hero'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'hero' }">Home</a>
+						<a href="#about" @click="scrollToSection('about'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'about' }">About</a>
+						<a href="#experience" @click="scrollToSection('experience'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'experience' }">Experience</a>
+						<a href="#projects" @click="scrollToSection('projects'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'projects' }">Projects</a>
+						<a href="#skills" @click="scrollToSection('skills'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'skills' }">Skills</a>
+						<a href="#contact" @click="scrollToSection('contact'); isMobileMenuOpen = false"
+							:class="{ active: activeSection === 'contact' }">Contact</a>
+					</div>
 				</div>
 
 				<div class="nav-actions">
